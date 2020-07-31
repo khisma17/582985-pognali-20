@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link href="../source/css/style.css" rel="stylesheet">
   </head>
   <body class="body">
     <header class="header">
-      <a href="" class="header__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
-      <button class="header__nav-toggle" type="button"></button>
+      <div class="header__wrapper">
+        <a href="" class="header__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+        <button class="header__nav-toggle" type="button"></button>
+      </div>
       <nav class="header__nav nav">
         <ul class="nav__list">
-          <li class="nav__item nav__item--active"><a>О сервисе</a></li>
-          <li class="nav__item"><a href="./form.html">Направления</a></li>
-          <li class="nav__item"><a href="./catalog.html">Попутчики</a></li>
+          <li class="nav__item nav__item--active"><a class="nav__link">О сервисе</a></li>
+          <li class="nav__item"><a class="nav__link" href="./form.html">Направления</a></li>
+          <li class="nav__item"><a class="nav__link" href="./catalog.html">Попутчики</a></li>
         </ul>
         <ul class="header__user-list user-list">
-          <li class="user-list__item"><a href="">Авторизация</a></li>
+          <li class="user-list__item"><a class="user-list__link" href="">Авторизация</a></li>
         </ul>
         <ul class="header__contacts-list contacts-list">
-          <li class="contacts-list__item"><a href="tel:88005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
-          <li class="contacts-list__item"><a href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a></li>
+          <li class="contacts-list__item"><a class="contacts-list__link" href="tel:88005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
+          <li class="contacts-list__item"><a class="contacts-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a></li>
         </ul>
         <ul class="header__social social">
           <li class="social__item"><a class="social__link social__link--facebook" href="" aria-label="Facebook"></a></li>
@@ -33,17 +36,17 @@
       <section class="promo">
         <h2 class="promo__motto">В путешествие с крутыми попутчиками!</h2>
         <ul class="promo__actions-list actions-list">
-          <li class="actions-list__item"><a href="tel:88005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
-          <li class="actions-list__item"><a href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a></li>
-          <li class="actions-list__item"><a href="login.html">Авторизация</a></li>
+          <li class="actions-list__item"><a class="actions-list__link" href="tel:88005558628" aria-label="Позвонить"></a></li>
+          <li class="actions-list__item"><a class="actions-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо"></a></li>
+          <li class="actions-list__item"><a class="actions-list__link" href="login.html">Авторизация</a></li>
         </ul>
-        <blockquote class="promo__quote">«Лучшее приложение, что я видел в жизни!»<cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite></blockquote>
-        <ol class="promo__roadmap roadmap">
+        <blockquote class="promo__quote">«Лучшее приложение, что я видел в жизни!»<br><cite class="promo__cite" >Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite></blockquote>
+        <ul class="promo__roadmap roadmap">
           <li class="roadmap__item">Выберите направление</li>
           <li class="roadmap__item">Изучите идеи путешественников</li>
           <li class="roadmap__item">Находите тех, кто похож на вас</li>
           <li class="roadmap__item">Путешествуйте вместе!</li>
-        </ol>
+        </ul>
         <section class="promo__about about">
           <h3 class="about__heading">О сервисе</h3>
           <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
@@ -83,8 +86,10 @@
       </section>
       <section class="companions">
         <h2 class="companions__heading">Попутчики</h2>
-        <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <b class="companions__text">Теперь можно легко найти единомышленников!</b>
+        <div class="companions__wrapper">
+          <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <b class="companions__text">Теперь можно легко найти единомышленников!</b>
+        </div>
         <ul class="companions__list companions-list">
           <li class="companions-list__item">
             <article class="companions-list__card companion-card">
@@ -128,20 +133,20 @@
       </section>
       <section class="rates">
         <h2 class="rates__heading">Добавьте свой профиль</h2>
-          <ol class="rates__list rates-list">
+          <ul class="rates__list rates-list">
             <li class="rates-list__item">
               <p class="rates-list__service">Базовое размещение</p>
               <p class="rates-list__price">Бесплатно</p>
             </li>
-            <li>
+            <li class="rates-list__item">
               <p class="rates-list__service">Вывод на первых позициях</p>
               <p class="rates-list__price">99 руб./мес</p>
             </li>
-            <li>
+            <li class="rates-list__item">
               <p class="rates-list__service">Кастомный цвет карточки</p>
               <p class="rates-list__price">59 руб./мес</p>
             </li>
-          </ol>
+          </ul>
         <a href="rates.html" class="rates__link">Показать тарифы для бизнеса</a>
       </section>
       <section class="login">
@@ -160,9 +165,14 @@
           <li class="contacts-list__item"><a href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a></li>
         </ul>
       </section>
-      <!-- <section class="map">
-
-      </section> -->
+      <section class="route">
+        <h3 class="visually-hidden">Маршрут</h3>
+        <div class="route__wrapper">
+          <p class="route__address">ул. Большая Конюшенная, 19/8</p>
+          <a href="" class="route__button button">Проложить маршрут</a>
+        </div>
+        <div class="route__map"></div>
+      </section>
       <footer class="footer">
         <a href="" class="footer__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
         <ul class="footer__social social social--light">

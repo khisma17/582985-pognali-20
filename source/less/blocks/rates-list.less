@@ -1,0 +1,31 @@
+.rates-list {
+  list-style: none;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: @basic-gray;
+
+  counter-reset: rates;
+}
+
+.rates-list__item {
+  counter-increment: rates;
+
+  &::after {
+    content: counter(rates);
+    color: @basic-white;
+  }
+
+  &:first-child::after {
+    background-color: @basic-orange;
+  }
+
+  &:nth-child(2)::after {
+    background-color: @special-yellow;
+  }
+
+  &:last-child::after {
+    background-color: @basic-yellow;
+  }
+}

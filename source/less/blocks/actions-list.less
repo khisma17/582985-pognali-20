@@ -1,0 +1,37 @@
+.actions-list {
+  list-style: none;
+}
+
+.actions-list__item {
+  &:first-child {
+    background-color: @basic-orange;
+  }
+
+  &:first-child::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+  }
+
+  &:nth-child(2) {
+    background-color: @special-yellow;
+  }
+
+  &:nth-child(2)::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+  }
+
+  &:last-child {
+    background-color: @basic-yellow;
+  }
+}
+
+.actions-list__link {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @basic-dark-blue;
+}
