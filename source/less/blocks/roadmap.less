@@ -4,9 +4,9 @@
   padding: 0;
   padding-bottom: 39px;
 
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
+  font-weight: @font-bold;
+  font-size: @roadmap-font-size;
+  line-height: @roadmap-line-height;
   color: @basic-dark-blue;
 
   counter-reset: roadmap;
@@ -34,9 +34,9 @@
   &::after {
     content: counter(roadmap);
 
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
+    font-weight: @font-bold;
+    font-size: @roadmap-font-size;
+    line-height: @roadmap-line-height;
     color: @basic-white;
   }
 }

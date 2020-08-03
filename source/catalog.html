@@ -7,161 +7,169 @@
   </head>
   <body class="body">
     <header class="header">
-      <a href="./index.html" class="header__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
-      <button class="header__nav-toggle" type="button"></button>
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="./index.html">О сервисе</a></li>
-          <li class="nav__item"><a class="nav__link" href="./form.html">Направления</a></li>
-          <li class="nav__item nav__item--active"><a class="nav__link">Попутчики</a></li>
-        </ul>
-        <ul class="header__user-list user-list">
-          <li class="user-list__item"><a class="user-list__link" href="">Авторизация</a></li>
-        </ul>
-        <ul class="header__contacts-list contacts-list">
-          <li class="contacts-list__item"><a class="contacts-list__link" href="tel:88005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
-          <li class="contacts-list__item"><a class="contacts-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a></li>
-        </ul>
-        <ul class="header__social social">
+      <div class="center">
+        <a href="./index.html" class="header__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+        <button class="header__nav-toggle" type="button"></button>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="./index.html">О сервисе</a></li>
+            <li class="nav__item"><a class="nav__link" href="./form.html">Направления</a></li>
+            <li class="nav__item nav__item--active"><a class="nav__link">Попутчики</a></li>
+          </ul>
+          <ul class="header__user-list user-list">
+            <li class="user-list__item"><a class="user-list__link" href="">Авторизация</a></li>
+          </ul>
+          <ul class="header__contacts-list contacts-list">
+            <li class="contacts-list__item"><a class="contacts-list__link" href="tel:88005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
+            <li class="contacts-list__item"><a class="contacts-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a></li>
+          </ul>
+          <ul class="header__social social">
+            <li class="social__item"><a class="social__link social__link--facebook" href="" aria-label="Facebook"></a></li>
+            <li class="social__item"><a class="social__link social__link--vkontakte" href="" aria-label="Вконтакте"></a></li>
+            <li class="social__item"><a class="social__link social__link--instagram" href="" aria-label="Instagram"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__active-tab">
+        <div class="center">
+          <h1 class="main__heading">Попутчики</h1>
+        </div>
+      </section>
+      <!-- Форма -->
+      <div class="companions companions--catalog">
+        <div class="center">
+          <article class="companions__card companion-card companion-card--detailed">
+            <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова"></a>
+            <a class="companion-card__link" href=""><h2 class="companion-card__name">Таня Фирсова</h2></a>
+            <p class="companion-card__followers">1,5 M</p>
+            <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <div class="companion-card__destinations-wrapper">
+              <p class="companion-card__intro">хочет посетить:</p>
+              <ul class="companion-card__destinations destinations-list destinations-list--detailed">
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Шри-Ланка" width="26" height="18">Шри-Ланка</li>
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Таиланд" width="26" height="18">Таиланд</li>
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Сейшелы" width="26" height="18">Сейшелы</li>
+              </ul>
+            </div>
+            <div class="companion-card__transport-wrapper">
+              <p class="companion-card__intro">транспорт:</p>
+              <ul class="companion-card__transport transport-list">
+                <li class="transport-list__item" aria-label="Авиаперелет"></li>
+                <li class="transport-list__item" aria-label="Автотранспорт"></li>
+                <li class="transport-list__item" aria-label="Велосипед"></li>
+                <li class="transport-list__item" aria-label="Пешком"></li>
+              </ul>
+            </div>
+            <div class="companion-card__level-bar level-bar level-bar--detailed">
+              <span class="level-bar__text">левел</span>
+              <span class="level-bar__level">99</span>
+            </div>
+            <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
+          </article>
+          <article class="companions__card companion-card companion-card--detailed">
+            <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин"></a>
+            <a class="companion-card__link" href=""><h2 class="companion-card__name">Петя Демин</h2></a>
+            <p class="companion-card__followers">1500</p>
+            <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <div class="companion-card__destinations-wrapper">
+              <p class="companion-card__intro">хочет посетить:</p>
+              <ul class="companion-card__destinations destinations-list destinations-list--detailed">
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Бельгия" width="26" height="18">Бельгия</li>
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Чехия" width="26" height="18">Чехия</li>
+              </ul>
+            </div>
+            <div class="companion-card__transport-wrapper">
+              <p class="companion-card__intro">транспорт:</p>
+              <ul class="companion-card__transport transport-list">
+                <li class="transport-list__item" aria-label="Авиаперелет"></li>
+                <li class="transport-list__item" aria-label="Автотранспорт"></li>
+                <li class="transport-list__item" aria-label="Велосипед"></li>
+                <li class="transport-list__item" aria-label="Пешком"></li>
+              </ul>
+            </div>
+            <div class="companion-card__level-bar level-bar level-bar--detailed">
+              <span class="level-bar__text">левел</span>
+              <span class="level-bar__level">80</span>
+            </div>
+            <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
+          </article>
+          <article class="companions__card companion-card companion-card--detailed">
+            <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов"></a>
+            <a class="companion-card__link" href=""><h2 class="companion-card__name">Марк Смолов</h2></a>
+            <p class="companion-card__followers">170</p>
+            <p class="companion-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <div class="companion-card__destinations-wrapper">
+              <p class="companion-card__intro">хочет посетить:</p>
+              <ul class="companion-card__destinations destinations-list destinations-list--detailed">
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="США" width="26" height="18">США</li>
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Австралия" width="26" height="18">Австралия</li>
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Доминика" width="26" height="18">Доминика</li>
+              </ul>
+            </div>
+            <div class="companion-card__transport-wrapper">
+              <p class="companion-card__intro">транспорт:</p>
+              <ul class="companion-card__transport transport-list">
+                <li class="transport-list__item" aria-label="Авиаперелет"></li>
+                <li class="transport-list__item" aria-label="Автотранспорт"></li>
+                <li class="transport-list__item" aria-label="Велосипед"></li>
+                <li class="transport-list__item" aria-label="Пешком"></li>
+              </ul>
+            </div>
+            <div class="companion-card__level-bar level-bar level-bar--detailed">
+              <span class="level-bar__text">левел</span>
+              <span class="level-bar__level">25</span>
+            </div>
+            <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
+          </article>
+          <article class="companions__card companion-card companion-card--detailed">
+            <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая"></a>
+            <a class="companion-card__link" href=""><h2 class="companion-card__name">Лариса Роговая</h2></a>
+            <p class="companion-card__followers">23</p>
+            <p class="companion-card__hashtags">#образование #карьера #учеба #линкедин</p>
+            <div class="companion-card__destinations-wrapper">
+              <p class="companion-card__intro">хочет посетить:</p>
+              <ul class="companion-card__destinations destinations-list destinations-list--detailed">
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Великобритания" width="26" height="18">Великобритания</li>
+                <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Германия" width="26" height="18">Германия</li>
+              </ul>
+            </div>
+            <div class="companion-card__transport-wrapper">
+              <p class="companion-card__intro">транспорт:</p>
+              <ul class="companion-card__transport transport-list">
+                <li class="transport-list__item" aria-label="Авиаперелет"></li>
+                <li class="transport-list__item" aria-label="Автотранспорт"></li>
+                <li class="transport-list__item" aria-label="Велосипед"></li>
+                <li class="transport-list__item" aria-label="Пешком"></li>
+              </ul>
+            </div>
+            <div class="companion-card__level-bar level-bar level-bar--detailed">
+              <span class="level-bar__text">левел</span>
+              <span class="level-bar__level">50</span>
+            </div>
+            <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
+          </article>
+          <a class="companions__button" href="companions.html">показать еще</a>
+          <div class="pagination">
+            <button class="pagination__button pagination__button--left" type="button"></button>
+            <button class="pagination__button pagination__button--right" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="center">
+        <a href="./index.html" class="footer__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+        <ul class="footer__social social social--light">
           <li class="social__item"><a class="social__link social__link--facebook" href="" aria-label="Facebook"></a></li>
           <li class="social__item"><a class="social__link social__link--vkontakte" href="" aria-label="Вконтакте"></a></li>
           <li class="social__item"><a class="social__link social__link--instagram" href="" aria-label="Instagram"></a></li>
         </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="main__active-tab">
-        <h1 class="main__heading">Попутчики</h1>
-      </section>
-      <!-- Форма -->
-      <div class="companions">
-        <article class="companions__card companion-card companion-card--detailed">
-          <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова"></a>
-          <a class="companion-card__link" href=""><h2 class="companion-card__name">Таня Фирсова</h2></a>
-          <p class="companion-card__followers">1,5 M</p>
-          <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <div class="companion-card__destinations-wrapper">
-            <p class="companion-card__intro">хочет посетить:</p>
-            <ul class="companion-card__destinations destinations-list destinations-list--detailed">
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Шри-Ланка" width="26" height="18">Шри-Ланка</li>
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Таиланд" width="26" height="18">Таиланд</li>
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Сейшелы" width="26" height="18">Сейшелы</li>
-            </ul>
-          </div>
-          <div class="companion-card__transport-wrapper">
-            <p class="companion-card__intro">транспорт:</p>
-            <ul class="companion-card__transport transport-list">
-              <li class="transport-list__item" aria-label="Авиаперелет"></li>
-              <li class="transport-list__item" aria-label="Автотранспорт"></li>
-              <li class="transport-list__item" aria-label="Велосипед"></li>
-              <li class="transport-list__item" aria-label="Пешком"></li>
-            </ul>
-          </div>
-          <div class="companion-card__level-bar level-bar level-bar--detailed">
-            <span class="level-bar__text">левел</span>
-            <span class="level-bar__level">99</span>
-          </div>
-          <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
-        </article>
-        <article class="companions__card companion-card companion-card--detailed">
-          <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин"></a>
-          <a class="companion-card__link" href=""><h2 class="companion-card__name">Петя Демин</h2></a>
-          <p class="companion-card__followers">1500</p>
-          <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
-          <div class="companion-card__destinations-wrapper">
-            <p class="companion-card__intro">хочет посетить:</p>
-            <ul class="companion-card__destinations destinations-list destinations-list--detailed">
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Бельгия" width="26" height="18">Бельгия</li>
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Чехия" width="26" height="18">Чехия</li>
-            </ul>
-          </div>
-          <div class="companion-card__transport-wrapper">
-            <p class="companion-card__intro">транспорт:</p>
-            <ul class="companion-card__transport transport-list">
-              <li class="transport-list__item" aria-label="Авиаперелет"></li>
-              <li class="transport-list__item" aria-label="Автотранспорт"></li>
-              <li class="transport-list__item" aria-label="Велосипед"></li>
-              <li class="transport-list__item" aria-label="Пешком"></li>
-            </ul>
-          </div>
-          <div class="companion-card__level-bar level-bar level-bar--detailed">
-            <span class="level-bar__text">левел</span>
-            <span class="level-bar__level">80</span>
-          </div>
-          <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
-        </article>
-        <article class="companions__card companion-card companion-card--detailed">
-          <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов"></a>
-          <a class="companion-card__link" href=""><h2 class="companion-card__name">Марк Смолов</h2></a>
-          <p class="companion-card__followers">170</p>
-          <p class="companion-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-          <div class="companion-card__destinations-wrapper">
-            <p class="companion-card__intro">хочет посетить:</p>
-            <ul class="companion-card__destinations destinations-list destinations-list--detailed">
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="США" width="26" height="18">США</li>
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Австралия" width="26" height="18">Австралия</li>
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Доминика" width="26" height="18">Доминика</li>
-            </ul>
-          </div>
-          <div class="companion-card__transport-wrapper">
-            <p class="companion-card__intro">транспорт:</p>
-            <ul class="companion-card__transport transport-list">
-              <li class="transport-list__item" aria-label="Авиаперелет"></li>
-              <li class="transport-list__item" aria-label="Автотранспорт"></li>
-              <li class="transport-list__item" aria-label="Велосипед"></li>
-              <li class="transport-list__item" aria-label="Пешком"></li>
-            </ul>
-          </div>
-          <div class="companion-card__level-bar level-bar level-bar--detailed">
-            <span class="level-bar__text">левел</span>
-            <span class="level-bar__level">25</span>
-          </div>
-          <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
-        </article>
-        <article class="companions__card companion-card companion-card--detailed">
-          <a class="companion-card__image-link" href=""><img class="companion-card__image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая"></a>
-          <a class="companion-card__link" href=""><h2 class="companion-card__name">Лариса Роговая</h2></a>
-          <p class="companion-card__followers">23</p>
-          <p class="companion-card__hashtags">#образование #карьера #учеба #линкедин</p>
-          <div class="companion-card__destinations-wrapper">
-            <p class="companion-card__intro">хочет посетить:</p>
-            <ul class="companion-card__destinations destinations-list destinations-list--detailed">
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Великобритания" width="26" height="18">Великобритания</li>
-              <li class="destinations-list__item"><img src="https://via.placeholder.com/26x18" alt="Германия" width="26" height="18">Германия</li>
-            </ul>
-          </div>
-          <div class="companion-card__transport-wrapper">
-            <p class="companion-card__intro">транспорт:</p>
-            <ul class="companion-card__transport transport-list">
-              <li class="transport-list__item" aria-label="Авиаперелет"></li>
-              <li class="transport-list__item" aria-label="Автотранспорт"></li>
-              <li class="transport-list__item" aria-label="Велосипед"></li>
-              <li class="transport-list__item" aria-label="Пешком"></li>
-            </ul>
-          </div>
-          <div class="companion-card__level-bar level-bar level-bar--detailed">
-            <span class="level-bar__text">левел</span>
-            <span class="level-bar__level">50</span>
-          </div>
-          <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
-        </article>
-      </div>
-      <a class="more-button" href="companions.html">показать еще</a>
-      <div class="pagination">
-        <button class="pagination__button pagination__button--left" type="button"></button>
-        <button class="pagination__button pagination__button--right" type="button"></button>
-      </div>
-    </main>
-    <footer class="footer">
-      <a href="./index.html" class="footer__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
-      <ul class="footer__social social social--light">
-        <li class="social__item"><a class="social__link social__link--facebook" href="" aria-label="Facebook"></a></li>
-        <li class="social__item"><a class="social__link social__link--vkontakte" href="" aria-label="Вконтакте"></a></li>
-        <li class="social__item"><a class="social__link social__link--instagram" href="" aria-label="Instagram"></a></li>
-      </ul>
-      <div class="footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт HTML Academy"></a>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт HTML Academy"></a>
+        </div>
       </div>
     </footer>
   </body>

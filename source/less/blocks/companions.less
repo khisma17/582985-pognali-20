@@ -1,4 +1,6 @@
 .companions {
+  padding-top: 68px;
+
   background-color: @basic-blue;
   background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
@@ -8,24 +10,35 @@
   padding-right: 25px;
   padding-bottom: 31px;
   padding-left: 25px;
+
+  &--catalog {
+    background-color: @basic-lighter-gray;
+    background-size: 0;
+  }
 }
 
 .companions__heading {
-  padding-top: 68px;
-
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
+  font-weight: @font-bold;
+  font-size: @heading-font-size;
+  line-height: @heading-line-height;
   color: @special-orange;
 }
 
 .companions__text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
-  color: @basic-white;
+  font-weight: @font-light;
+  font-size: @text-font-size;
+  line-height: @text-line-height;
+  color: @text-color;
 
   &:last-child {
-    font-weight: bold;
+    font-weight: @font-bold;
   }
+}
+
+.companions__button {
+  font-weight: @font-bold;
+  font-size: @button-font-size;
+  line-height: @button-line-height;
+  text-transform: uppercase;
+  color: @button-color;
 }

@@ -4,38 +4,39 @@
   margin-bottom: 10px;
 
   &--detailed .companion-card__name {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: @companion-font-size;
+    line-height: @companion-line-height;
   }
 
   &--detailed .companion-card__hashtags {
-    font-size: 15px;
+    font-size: @additional-text-font-size;
+    line-height: 18px;
   }
 }
 
 .companion-card__name {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-  color: @special-blue;
+  font-weight: @font-bold;
+  font-size: @name-font-size;
+  line-height: @name-line-height;
+  color: @title-color;
 }
 
 .companion-card__hashtags {
-  font-size: 16px;
-  line-height: 18px;
-  color: @basic-gray;
+  font-size: @text-special-font-size;
+  line-height: @text-special-line-height;
+  color: @alt-text-color;
 }
 
 .companion-card__followers {
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: @font-bold;
+  font-size: @details-font-size;
   line-height: 16px;
   text-transform: uppercase;
   color: @basic-dark-blue;
 }
 
 .companion-card__intro {
-  font-size: 15px;
-  line-height: 16px;
-  color: @basic-gray;
+  font-size: @additional-text-font-size;
+  line-height: @additional-text-line-height;
+  color: @alt-text-color;
 }
