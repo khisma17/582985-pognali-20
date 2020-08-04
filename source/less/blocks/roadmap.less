@@ -1,0 +1,42 @@
+.roadmap {
+  list-style: none;
+
+  padding: 0;
+  padding-bottom: 39px;
+
+  font-weight: @font-bold;
+  font-size: @roadmap-font-size;
+  line-height: @roadmap-line-height;
+  color: @basic-dark-blue;
+
+  counter-reset: roadmap;
+}
+
+.roadmap__item {
+  counter-increment: roadmap;
+
+  &:first-child {
+    background-color: @basic-orange;
+  }
+
+  &:nth-child(2) {
+    background-color: @special-orange;
+  }
+
+  &:nth-child(3) {
+    background-color: @special-yellow;
+  }
+
+  &:last-child {
+    background-color: @basic-yellow;
+  }
+
+  &::after {
+    content: counter(roadmap);
+
+    font-weight: @font-bold;
+    font-size: @roadmap-font-size;
+    line-height: @roadmap-line-height;
+    color: @basic-white;
+  }
+}

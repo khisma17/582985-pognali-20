@@ -1,0 +1,30 @@
+.level-bar {
+  background-color: @special-hover-black;
+
+  color: @basic-white;
+
+  &--detailed {
+    background-color: @basic-white;
+  }
+
+  &--detailed .level-bar__text {
+    font-size: @additional-text-font-size;
+    line-height: @additional-text-line-height;
+    color: @alt-text-color;
+  }
+
+  &--detailed .level-bar__level {
+    color: @special-blue;
+  }
+}
+
+.level-bar__level {
+  font-weight: @font-bold;
+  font-size: @heading-font-size;
+  line-height: @heading-line-height;
+}
+
+.level-bar__text {
+  font-size: @details-font-size;
+  line-height: 14px;
+}
