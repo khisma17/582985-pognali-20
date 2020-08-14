@@ -7,8 +7,16 @@
   font-weight: @font-bold;
   font-size: @text-special-font-size;
   line-height: @text-special-line-height;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .contacts-list__link {
   color: @link-color;
+
+  &--alt {
+    color: @alt-link-color;
+  }
 }

@@ -11,6 +11,11 @@
   color: @basic-dark-blue;
 
   counter-reset: roadmap;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .roadmap__item {
@@ -30,6 +35,16 @@
 
   &:last-child {
     background-color: @basic-yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:nth-child(2n - 1) {
+      width: 365px;
+    }
+
+    &:nth-child(2n) {
+      width: 344px;
+    }
   }
 
   &::after {

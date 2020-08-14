@@ -1,0 +1,26 @@
+.route {
+  background-color: @basic-yellow;
+}
+
+.route__address {
+  font-weight: @font-bold;
+  font-size: @text-font-size;
+  line-height: @text-line-height;
+  text-transform: uppercase;
+  color: @title-color;
+}
+
+@media (min-width: @desktop-width) {
+  .route__wrapper {
+    display: flex;
+  }
+}
+
+.route__button {
+  border: 3px solid @basic-blue;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
+  }
+}

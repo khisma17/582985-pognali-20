@@ -48,3 +48,38 @@
   text-transform: uppercase;
   color: @button-color;
 }
+
+@media (min-width: @tablet-width) {
+  .companions__list {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions__center {
+    display: grid;
+    grid-template-columns: 427px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "heading list"
+    "text list"
+    "button list";
+    column-gap: 190px;
+  }
+
+  .companions__heading {
+    grid-area: heading;
+  }
+
+  .companions__wrapper {
+    grid-area: text;
+  }
+
+  .companions__list {
+    grid-area: list;
+  }
+
+  .companions__button {
+    grid-area: button;
+  }
+}
