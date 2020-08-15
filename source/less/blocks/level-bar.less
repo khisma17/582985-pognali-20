@@ -11,10 +11,18 @@
     font-size: @additional-text-font-size;
     line-height: @additional-text-line-height;
     color: @alt-text-color;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 
   &--transparent .level-bar__level {
     color: @special-blue;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }
 

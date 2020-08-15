@@ -11,13 +11,9 @@
 }
 
 .country-dropdown__countries-list {
-  list-style: none;
+  display: none;
 
-  margin: 0;
-}
-
-.country-dropdown__country {
-  font-size: @text-font-size;
-  line-height: @text-line-height;
-  color: @alt-text-color;
+  &--active {
+    display: block;
+  }
 }

@@ -3,6 +3,8 @@
 }
 
 .step__heading {
+  width: 50%;
+
   font-weight: @font-bold;
   font-size: @companion-font-size;
   line-height: @companion-line-height;
@@ -13,6 +15,33 @@
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @alt-text-color;
+}
+
+.step__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.step__companions {
+  @media (min-width: @tablet-width) {
+    order: -2;
+  }
+}
+
+.step__children {
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }
 
 .step__label {
@@ -79,5 +108,42 @@
 
   &::placeholder {
     color: @special-light-gray;
+  }
+}
+
+.step__navigation {
+  margin: 0;
+  padding: 0;
+
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.step__navigation-link {
+  font-size: @navigation-font-size;
+  line-height: @navigation-line-height;
+  text-transform: uppercase;
+  color: @special-hover-black;
+
+  &--active {
+    color: @basic-black;
+  }
+}
+
+.step__header {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.step__buttons {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
   }
 }

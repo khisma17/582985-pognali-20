@@ -14,6 +14,12 @@
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
+
+  &--inline {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+    }
+  }
 }
 
 .login__login {

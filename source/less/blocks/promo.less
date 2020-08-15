@@ -1,8 +1,6 @@
 .promo {
   background-color: @basic-blue;
 
-  padding-left: 25px;
-  padding-right: 25px;
   padding-bottom: 82px;
 }
 
@@ -35,14 +33,26 @@
   color: @text-color;
 }
 
-@media (min-width: @tablet-width) {
-  .promo__actions-list {
+.promo__actions-list {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .promo__wrapper {
+.promo__wrapper {
+  @media (min-width: @tablet-width) {
+    padding-right: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
+
+    padding-right: 0;
+  }
+}
+
+.promo__about {
+  @media (min-width: @tablet-width) {
+    padding-right: 50%;
   }
 }
