@@ -9,7 +9,8 @@
     flex-direction: column;
 
     @media (min-width: @desktop-width) {
-      flex-direction: row;
+      display: grid;
+      grid-template-areas: "companions form";
     }
   }
 }
@@ -45,6 +46,15 @@
 
 .main__form {
   @media (min-width: @desktop-width) {
-    order: 1;
+    grid-area: form;
+    margin-left: auto;
+    width: 20%;
+  }
+}
+
+.main__companions {
+  @media (min-width: @desktop-width) {
+    grid-area: companions;
+    width: 65%;
   }
 }

@@ -24,6 +24,10 @@
 
   border: 1px solid @special-outline-gray;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }
 
 .profile__level-bar {
@@ -42,7 +46,17 @@
   }
 }
 
+.profile__hashtags {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .profile__transport {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   @media (min-width: @tablet-width) {
     order: -1;
   }
@@ -55,22 +69,18 @@
 .profile__transport-list {
   border: 1px solid @special-outline-gray;
   border-radius: 10px;
-}
 
-.profile__upload {
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
+  @media (min-width: @tablet-width) {
+    order: -1;
   }
 }
 
 .profile__input {
   display: none;
+}
+
+.profile__sublabel {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

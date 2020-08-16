@@ -1,8 +1,27 @@
 .countries-list {
+  position: absolute;
+  top: 205px;
+
   list-style: none;
 
   margin: 0;
   padding: 0;
+  height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 365px;
+
+    height: 415px;
+  }
+
+  &--filter {
+    @media (min-width: @desktop-width) {
+      position: static;
+    }
+  }
 }
 
 .countries-list__item {

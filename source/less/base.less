@@ -37,15 +37,28 @@ svg {
 
 .center {
   width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 25px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
+    padding: 0 40px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    padding: 0 60px;
+  }
+}
+
+.only-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 
-  margin: 0 auto;
-  padding: 0 25px;
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

@@ -1,5 +1,27 @@
 .header {
   background-color: @basic-dark-blue;
+
+  &--nojs {
+    background-color: @basic-white;
+
+    .header__nav-toggle {
+      display: none;
+    }
+
+    .header__nav {
+      display: block;
+    }
+  }
+
+  &--opened {
+    background-color: @basic-white;
+
+    .header__nav {
+      position: absolute;
+
+      display: block;
+    }
+  }
 }
 
 .header__wrapper {
@@ -56,8 +78,6 @@
 }
 
 .header__login {
-  display: none;
-
   background-color: @button-background;
 
   font-weight: @font-bold;
@@ -65,12 +85,4 @@
   line-height: @button-line-height;
   text-transform: uppercase;
   color: @basic-dark-blue;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
 }

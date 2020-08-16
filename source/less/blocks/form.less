@@ -9,6 +9,18 @@
   color: @title-color;
 }
 
+.form__fieldset {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
 .form__legend {
   font-weight: @font-bold;
   font-size: @text-special-font-size;
@@ -16,11 +28,31 @@
   color: @title-color;
 }
 
+.form__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .form__list {
   list-style: none;
 
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+
+  &--transport {
+    flex-direction: row;
+  }
 }
 
 .form__label {
