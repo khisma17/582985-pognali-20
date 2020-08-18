@@ -3,18 +3,26 @@
 
   color: @basic-white;
 
-  &--detailed {
-    background-color: @basic-white;
+  &--transparent {
+    background-color: inherit;
   }
 
-  &--detailed .level-bar__text {
+  &--transparent .level-bar__text {
     font-size: @additional-text-font-size;
     line-height: @additional-text-line-height;
     color: @alt-text-color;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 
-  &--detailed .level-bar__level {
+  &--transparent .level-bar__level {
     color: @special-blue;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }
 
@@ -26,5 +34,5 @@
 
 .level-bar__text {
   font-size: @details-font-size;
-  line-height: 14px;
+  line-height: @details-line-height;
 }

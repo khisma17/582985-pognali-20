@@ -1,0 +1,49 @@
+.login {
+  background-color: @basic-blue;
+}
+
+.login__heading {
+  font-weight: @font-bold;
+  font-size: @heading-font-size;
+  line-height: @heading-line-height;
+  color: @section-heading-color;
+}
+
+.login__text {
+  font-weight: @font-light;
+  font-size: @text-font-size;
+  line-height: @text-line-height;
+  color: @text-color;
+
+  &--inline {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+    }
+  }
+}
+
+.login__login {
+  text-decoration: underline;
+  color: @alt-link-color;
+}
+
+.login__email::placeholder {
+  font-weight: @font-bold;
+  font-size: @roadmap-font-size;
+  line-height: @roadmap-line-height;
+  color: @special-light-gray;
+}
+
+.login__button {
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+
+    &--desktop {
+      display: inline;
+    }
+  }
+}

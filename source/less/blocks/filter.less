@@ -1,0 +1,23 @@
+.filter {
+  background-color: @special-light-blue;
+}
+
+.filter__heading {
+  font-weight: @font-bold;
+  font-size: @text-special-font-size;
+  line-height: @text-special-line-height;
+  text-transform: uppercase;
+  color: @basic-blue;
+}
+
+.filter__countries-list {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}

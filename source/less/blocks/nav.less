@@ -1,20 +1,29 @@
 .nav {
+  display: none;
+
   background-color: @basic-white;
 
-  padding-left: 25px;
-  padding-right: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .nav__list {
   list-style: none;
 
+  margin: 0;
   padding: 0;
 
   font-size: @nav-font-size;
   line-height: @nav-line-height;
   font-weight: @font-medium;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .nav__link {

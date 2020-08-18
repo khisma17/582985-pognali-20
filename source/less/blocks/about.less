@@ -2,11 +2,9 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: 292px 353px;
-  background-position: center center;
+  background-position: center right;
 
   padding-top: 33px;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 .about__heading {
@@ -26,5 +24,11 @@
 
   &:last-child {
     font-weight: @font-bold;
+  }
+}
+
+.about__button {
+  @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }

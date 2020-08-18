@@ -1,0 +1,36 @@
+.calendar {
+  font-size: @title-font-size;
+  line-height: @title-line-height;
+}
+
+.calendar__header-cell {
+  font-weight: @font-normal;
+  text-transform: uppercase;
+  color: @alt-text-color;
+
+  &:nth-child(6) {
+    color: @special-dark-orange;
+  }
+
+  &:last-child {
+    color: @special-dark-orange;
+  }
+}
+
+.calendar__day {
+  color: @special-light-gray;
+
+  border: 1px solid @special-calendar-gray;
+
+  &--future {
+    background-color: @basic-lighter-gray;
+    font-weight: @font-medium;
+    color: @title-color;
+  }
+
+  &--active {
+    background-color: @special-blue;
+
+    color: @basic-white;
+  }
+}

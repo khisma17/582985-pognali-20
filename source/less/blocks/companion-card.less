@@ -1,7 +1,48 @@
 .companion-card {
+  display: grid;
+  grid-template: "image" auto
+    "destinations" auto
+    "name" auto
+    "hashtags" auto
+    "transport" auto / 100%;
   background-color: @basic-white;
 
   margin-bottom: 10px;
+
+  &--detailed {
+    grid-template: "image name name" auto
+      "image followers followers" auto
+      "hashtags hashtags hashtags" auto
+      "destinations destinations destinations" auto
+      "transport transport level" auto
+      "button button button" auto / auto 1fr auto;
+
+    .companion-card__level-bar {
+      grid-area: level;
+      position: static;
+    }
+
+    @media (min-width: @tablet-width) {
+      grid-template: "image name name transport" auto
+        "image hashtags hashtags transport" auto
+        "image button followers level" auto
+        "destinations destinations destinations destinations" auto / auto auto 1fr auto;
+
+      .companion-card__intro--transport {
+        display: none;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template: "image name name destinations destinations" auto
+        "image hashtags hashtags destinations destinations" auto
+        "image button followers transport level" auto / auto auto 1fr auto auto;
+
+      .companion-card__intro--destinations {
+        display: none;
+      }
+    }
+  }
 
   &--detailed .companion-card__name {
     font-size: @companion-font-size;
@@ -14,7 +55,31 @@
   }
 }
 
+.companion-card__image-link {
+  grid-area: image;
+}
+
+.companion-card__level-bar {
+  grid-area: image;
+
+  position: absolute;
+}
+
+.companion-card__destinations-wrapper {
+  grid-area: destinations;
+}
+
+.companion-card__destinations {
+  grid-area: destinations;
+}
+
+.companion-card__link {
+  grid-area: name;
+}
+
 .companion-card__name {
+  margin: 0;
+
   font-weight: @font-bold;
   font-size: @name-font-size;
   line-height: @name-line-height;
@@ -22,12 +87,28 @@
 }
 
 .companion-card__hashtags {
+  grid-area: hashtags;
+
+  margin: 0;
+
   font-size: @text-special-font-size;
   line-height: @text-special-line-height;
   color: @alt-text-color;
 }
 
+.companion-card__transport-wrapper {
+  grid-area: transport;
+}
+
+.companion-card__transport {
+  grid-area: transport;
+}
+
 .companion-card__followers {
+  grid-area: followers;
+
+  margin: 0;
+
   font-weight: @font-bold;
   font-size: @details-font-size;
   line-height: 16px;
@@ -36,7 +117,13 @@
 }
 
 .companion-card__intro {
+  margin: 0;
+
   font-size: @additional-text-font-size;
   line-height: @additional-text-line-height;
   color: @alt-text-color;
+}
+
+.companion-card__button {
+  grid-area: button;
 }

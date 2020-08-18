@@ -2,29 +2,48 @@
   padding-top: 68px;
 
   background-color: @basic-blue;
+
+  padding-bottom: 31px;
+
+  &--catalog {
+    background-color: @basic-lighter-gray;
+  }
+}
+
+.companions__center {
   background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: 143px 143px, 71px 71px;
   background-position: top right, center left;
 
-  padding-right: 25px;
-  padding-bottom: 31px;
-  padding-left: 25px;
-
-  &--catalog {
-    background-color: @basic-lighter-gray;
-    background-size: 0;
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 427px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "heading list"
+      "text list"
+      "button list";
+    column-gap: 190px;
   }
 }
 
 .companions__heading {
+  margin: 0;
+
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @special-orange;
+
+  @media (min-width: @desktop-width) {
+    grid-area: heading;
+  }
 }
 
 .companions__text {
+  margin: 0;
+
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
@@ -41,4 +60,24 @@
   line-height: @button-line-height;
   text-transform: uppercase;
   color: @button-color;
+
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+  }
+}
+
+.companions__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: list;
+  }
+}
+
+.companions__wrapper {
+  @media (min-width: @desktop-width) {
+    grid-area: text;
+  }
 }

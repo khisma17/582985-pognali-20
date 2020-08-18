@@ -1,12 +1,12 @@
 .promo {
   background-color: @basic-blue;
 
-  padding-left: 25px;
-  padding-right: 25px;
   padding-bottom: 82px;
 }
 
 .promo__motto {
+  margin: 0;
+
   font-weight: @font-bold;
   font-size: @main-heading-font-size;
   line-height: 40px;
@@ -31,4 +31,28 @@
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
+}
+
+.promo__actions-list {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.promo__wrapper {
+  @media (min-width: @tablet-width) {
+    padding-right: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+
+    padding-right: 0;
+  }
+}
+
+.promo__about {
+  @media (min-width: @tablet-width) {
+    padding-right: 50%;
+  }
 }

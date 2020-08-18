@@ -1,9 +1,88 @@
 .header {
   background-color: @basic-dark-blue;
+
+  &--nojs {
+    background-color: @basic-white;
+
+    .header__nav-toggle {
+      display: none;
+    }
+
+    .header__nav {
+      display: block;
+    }
+  }
+
+  &--opened {
+    background-color: @basic-white;
+
+    .header__nav {
+      position: absolute;
+
+      display: block;
+    }
+  }
 }
 
 .header__wrapper {
-  padding-top: 28px;
-  padding-left: 26px;
-  padding-right: 24px;
+  display: flex;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 28px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+  }
+}
+
+.header__nav-toggle {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__center {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+    padding-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+
+    padding-top: 46px;
+  }
+}
+
+.header__logo {
+  width: 96px;
+
+  margin-right: auto;
+}
+
+.header__user-list {
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+
+.header__social {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__login {
+  background-color: @button-background;
+
+  font-weight: @font-bold;
+  font-size: @button-font-size;
+  line-height: @button-line-height;
+  text-transform: uppercase;
+  color: @basic-dark-blue;
 }

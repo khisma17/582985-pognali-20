@@ -1,0 +1,24 @@
+.continents-list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.continents-list__button {
+  font-weight: @font-bold;
+  font-size: @text-special-font-size;
+  line-height: @text-special-line-height;
+  color: @special-active-blue-gray;
+
+  &--active {
+    color: @link-color;
+  }
+}

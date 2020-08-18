@@ -2,16 +2,27 @@
   background-color: @basic-lighter-gray;
 
   padding-top: 71px;
-  padding-right: 25px;
   padding-bottom: 34px;
-  padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/flags-back@1x.png");
+    background-size: 288px 574px;
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
 }
 
 .directions__heading {
+  margin: 0;
+
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @section-heading-color;
+
+  @media (min-width: @desktop-width) {
+    grid-area: heading;
+  }
 }
 
 .directions__text {
@@ -19,4 +30,33 @@
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @alt-text-color;
+
+  @media (min-width: @desktop-width) {
+    grid-area: text;
+  }
+}
+
+.directions__center {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 560px 378px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "list heading"
+      "list text"
+      "list button";
+    column-gap: 170px;
+  }
+}
+
+.directions__list {
+  @media (min-width: @desktop-width) {
+    grid-area: list;
+  }
+}
+
+.directions__button {
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+  }
 }
