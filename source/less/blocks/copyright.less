@@ -1,7 +1,19 @@
 .copyright__text {
   margin: 0;
+  padding: 0;
 
   font-size: @text-alt-font-size;
   line-height: @text-alt-line-height;
   color: @alt-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
+}
+
+.copyright__link {
+  margin-left: auto;
+  line-height: 0;
+  color: @link-color;
 }

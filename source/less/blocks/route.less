@@ -1,26 +1,77 @@
 .route {
+  position: relative;
+  top: -32px;
+  z-index: 1;
+
+  margin-bottom: -32px;
+  padding-top: 63px;
+  padding-bottom: 35px;
+
   background-color: @basic-yellow;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .route__address {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 32px;
+  padding-left: 23%;
+  padding-right: 24%;
+
   font-weight: @font-bold;
   font-size: @text-font-size;
   line-height: @text-line-height;
   text-transform: uppercase;
   color: @title-color;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: @special-dark-blue;
+    border-radius: 50%;
+  }
+}
+
+.route__address-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+
+  color: @basic-yellow;
 }
 
 .route__wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
 .route__button {
+  position: relative;
+
+  padding: 22px;
+
   border: 3px solid @basic-blue;
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
     border-radius: 20px;
   }
+}
+
+.route__button-icon {
+  position: absolute;
+  top: 24px;
+  right: 22px;
 }

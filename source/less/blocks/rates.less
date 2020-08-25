@@ -1,35 +1,61 @@
 .rates {
+  position: relative;
+  top: -53px;
+  z-index: 3;
+
   background-color: @basic-light-gray;
+  border-radius: 30px;
 
-  padding-top: 37px;
+  margin-bottom: -53px;
+  padding-top: 106px;
   padding-bottom: 38px;
-}
 
-.rates__center {
-  padding-left: 49px;
+  &::after {
+    content: "";
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    top: 90px;
+    right: 25px;
+
+    background-image: url("../img/rates@1x.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+  }
 }
 
 .rates__heading {
+  width: 40%;
+
   margin: 0;
+  margin-bottom: 56px;
+  padding-left: 9%;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @section-heading-color;
 
-  background-image: url("../img/rates@1x.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 100px 100px;
-
   @media (min-width: @tablet-width) {
-    background-size: 0 0;
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+
+    background-size: 0;
   }
 }
 
 .rates__link {
+  padding-left: 9%;
+
   font-weight: @font-bold;
   font-size: @text-alt-font-size;
   line-height: @text-alt-line-height;
   color: @special-rates-blue;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }

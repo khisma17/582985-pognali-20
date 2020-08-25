@@ -1,32 +1,64 @@
 .level-bar {
-  background-color: @special-hover-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-top: 15px;
+  padding-right: 17px;
+  padding-bottom: 9px;
+  padding-left: 17px;
 
   color: @basic-white;
 
-  &--transparent {
+  background-color: @special-hover-black;
+  border-radius: 50%;
+
+  &--catalog {
     background-color: inherit;
-  }
 
-  &--transparent .level-bar__text {
-    font-size: @additional-text-font-size;
-    line-height: @additional-text-line-height;
-    color: @alt-text-color;
+    .level-bar__text {
+      color: @special-level-black;
 
-    @media (min-width: @desktop-width) {
-      color: @basic-white;
+      @media (max-width: @mobile-width-only) {
+        font-size: @additional-text-font-size;
+        line-height: @additional-text-line-height;
+        color: @alt-text-color;
+      }
+    }
+
+    .level-bar__level {
+      color: @special-blue;
     }
   }
 
-  &--transparent .level-bar__level {
-    color: @special-blue;
+  &--form {
+    background-color: inherit;
 
-    @media (min-width: @desktop-width) {
-      color: @basic-white;
+    .level-bar__level {
+      font-size: @level-form-font-size;
+      line-height: @level-form-line-height;
+      color: @basic-dark-blue;
+
+      @media (min-width: @desktop-width) {
+        color: @basic-white;
+      }
+    }
+
+    .level-bar__text {
+      font-size: @roadmap-font-size;
+      line-height: @roadmap-line-height;
+      color: @alt-text-color;
+
+      @media (min-width: @desktop-width) {
+        color: @basic-white;
+      }
     }
   }
 }
 
 .level-bar__level {
+  margin-bottom: 5px;
+
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;

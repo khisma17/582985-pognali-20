@@ -1,6 +1,12 @@
 .calendar {
   font-size: @title-font-size;
   line-height: @title-line-height;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: @calendar-tablet-font-size;
+    line-height: @calendar-tablet-line-height;
+  }
 }
 
 .calendar__header-cell {
@@ -14,6 +20,16 @@
 
   &:last-child {
     color: @special-dark-orange;
+  }
+}
+
+.calendar__header-extended {
+  display: none;
+
+  text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
 
@@ -32,5 +48,15 @@
     background-color: @special-blue;
 
     color: @basic-white;
+  }
+}
+
+.calendar__day-memo {
+  display: none;
+
+  line-height: @alt-line-height;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }

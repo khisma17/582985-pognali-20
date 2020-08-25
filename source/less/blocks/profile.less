@@ -4,6 +4,8 @@
 
 .profile__center {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -13,6 +15,11 @@
   line-height: @text-special-line-height;
   text-transform: uppercase;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }
 
 .profile__tags {
@@ -27,6 +34,9 @@
 
   @media (min-width: @tablet-width) {
     order: -1;
+
+    font-size: @hashtags-tablet-font-size;
+    line-height: @hashtags-tablet-line-height;
   }
 }
 
@@ -82,5 +92,18 @@
 .profile__sublabel {
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.profile__button {
+  font-size: @profile-button-font-size;
+  line-height: @profile-button-line-height;
+
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: normal;
   }
 }

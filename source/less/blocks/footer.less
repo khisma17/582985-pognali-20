@@ -1,14 +1,31 @@
 .footer {
+  position: relative;
+  top: -19px;
+  z-index: 1;
+
   padding-top: 37px;
-  padding-bottom: 19px;
+
+  background-color: @basic-white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .footer__copyright {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .footer__center {
   @media (min-width: @tablet-width) {
     display: flex;
   }
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 40px;
+  padding-left: 32%;
+  padding-right: 32%;
 }

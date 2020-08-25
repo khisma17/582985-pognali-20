@@ -1,25 +1,68 @@
 .login {
+  position: relative;
+  top: -33px;
+  z-index: 2;
+
+  margin-bottom: -33px;
+  padding-top: 105px;
+  padding-bottom: 44px;
+
   background-color: @basic-blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .login__heading {
+  padding-left: 11%;
+  padding-right: 11%;
+
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @section-heading-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+  }
 }
 
 .login__text {
+  margin: 0;
+  padding-left: 10%;
+  padding-right: 11%;
+
+  text-align: center;
+
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
 
+  @media (min-width: @tablet-width) {
+    font-size: @text-tablet-font-size;
+    line-height: @text-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: @text-desktop-line-height;
+  }
+
   &--inline {
     @media (min-width: @tablet-width) {
       display: inline-block;
+
+      line-height: 30px;
     }
   }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 29px;
+  margin-bottom: 29px;
 }
 
 .login__login {
@@ -27,14 +70,44 @@
   color: @alt-link-color;
 }
 
+.login__email {
+  display: block;
+
+  width: 81%;
+  padding: 0;
+
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 .login__email::placeholder {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
   font-weight: @font-bold;
   font-size: @roadmap-font-size;
   line-height: @roadmap-line-height;
   color: @special-light-gray;
+
+  @media (min-width: @tablet-width) {
+    font-size: @button-tablet-font-size;
+    line-height: @button-tablet-line-height;
+  }
 }
 
 .login__button {
+    position: relative;
+    left: -10px;
+
+    width: 60px;
+    height: 62px;
+
+
+    border: none;
+    border-radius: 10px;
+
   &--desktop {
     display: none;
   }
@@ -46,4 +119,13 @@
       display: inline;
     }
   }
+}
+
+.login__button-icon {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+
+  width: 14px;
+  height: 13px;
 }

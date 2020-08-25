@@ -7,10 +7,10 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="body">
-    <header class="header header--opened header--nojs">
+    <header class="header header--closed">
       <div class="center header__center">
         <div class="header__wrapper">
-          <a href="" class="header__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+          <a href="" class="header__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
           <button class="header__nav-toggle" type="button"></button>
           <a class="header__login only-tablet" href="">Авторизация</a>
         </div>
@@ -39,14 +39,14 @@
       <section class="main__active-tab">
         <div class="center main__center">
           <h1 class="main__heading">Направления</h1>
-          <div class="main__level-bar level-bar level-bar--transparent"><span class="level-bar__level">80</span><span class="level-bar__text">level</span></div>
+          <div class="main__level-bar level-bar level-bar--form"><span class="level-bar__level">80</span><span class="level-bar__text">level</span></div>
           <img class="main__image" src="https://via.placeholder.com/190x190" width="190" height="190" alt="Профильное изображение">
         </div>
       </section>
       <section class="profile">
         <div class="center profile__center">
           <h2 class="profile__heading visually-hidden">Профиль</h2>
-          <div class="profile__level-bar level-bar level-bar--transparent"><span class="level-bar__level">80</span><span class="level-bar__text">level</span></div>
+          <div class="profile__level-bar level-bar level-bar--form"><span class="level-bar__level">80</span><span class="level-bar__text">level</span></div>
           <img class="profile__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Профильное изображение">
           <div class="profile__upload">
             <input class="profile__input" type="file" name="avatar" id="avatar">
@@ -146,13 +146,13 @@
                   </div>
                   <table class="step__calendar calendar">
                     <tr class="calendar__header">
-                      <th class="calendar__header-cell">П</th>
-                      <th class="calendar__header-cell">В</th>
-                      <th class="calendar__header-cell">С</th>
-                      <th class="calendar__header-cell">Ч</th>
-                      <th class="calendar__header-cell">П</th>
-                      <th class="calendar__header-cell">С</th>
-                      <th class="calendar__header-cell">В</th>
+                      <th class="calendar__header-cell">П<span class="calendar__header-extended">н</span></th>
+                      <th class="calendar__header-cell">В<span class="calendar__header-extended">т</span></th>
+                      <th class="calendar__header-cell">С<span class="calendar__header-extended">р</span></th>
+                      <th class="calendar__header-cell">Ч<span class="calendar__header-extended">т</span></th>
+                      <th class="calendar__header-cell">П<span class="calendar__header-extended">т</span></th>
+                      <th class="calendar__header-cell">С<span class="calendar__header-extended">б</span></th>
+                      <th class="calendar__header-cell">В<span class="calendar__header-extended">с</span></th>
                     </tr>
                     <tr class="calendar__week">
                       <td class="calendar__day">23</td>
@@ -194,9 +194,9 @@
                       <td class="calendar__day">23</td>
                       <td class="calendar__day">24</td>
                       <td class="calendar__day">25</td>
-                      <td class="calendar__day calendar__day--future calendar__day--active">26</td>
+                      <td class="calendar__day calendar__day--future calendar__day--active">26<p class="calendar__day-memo">Заезд</p></td>
                       <td class="calendar__day calendar__day--future calendar__day--active">27</td>
-                      <td class="calendar__day calendar__day--future calendar__day--active">28</td>
+                      <td class="calendar__day calendar__day--future calendar__day--active">28<p class="calendar__day-memo">Выезд</p></td>
                       <td class="calendar__day calendar__day--future">29</td>
                     </tr>
                     <tr class="calendar__week">
@@ -234,296 +234,296 @@
                 <input class="step__input" type="text" name="country-2" id="country-2" value="Чехия">
               </div>
               <div class="step__dropdown-wrapper">
-                <h4 class="step__input">Выберите страну</h4>
+                <h4 class="step__input step__input--dropdown">Выберите страну</h4>
                 <button class="step__toggle" type="button"></button>
               </div>
               <ul class="step__dropdown letterfield">
                 <li class="letterfield__item">
-                  <button class="letterfield__letter letterfield__letter--active-plans">А</button>
+                  <button class="letterfield__letter letterfield__letter--plans letterfield__letter--active-plans">А</button>
                   <ul class="letterfield__countries-list letterfield__countries-list--active countries-list">
-                    <li class="countries-list__item">Австралия</li>
-                    <li class="countries-list__item">Австрия</li>
-                    <li class="countries-list__item">Азербайджан</li>
-                    <li class="countries-list__item">Албания</li>
-                    <li class="countries-list__item">Алжир</li>
-                    <li class="countries-list__item">Ангола</li>
-                    <li class="countries-list__item">Андорра</li>
-                    <li class="countries-list__item">Антигуа и Барбуда</li>
-                    <li class="countries-list__item">Аргентина</li>
-                    <li class="countries-list__item">Армения</li>
-                    <li class="countries-list__item">Афганистан</li>
+                    <li class="countries-list__item countries-list__item--plans">Австралия</li>
+                    <li class="countries-list__item countries-list__item--plans">Австрия</li>
+                    <li class="countries-list__item countries-list__item--plans">Азербайджан</li>
+                    <li class="countries-list__item countries-list__item--plans">Албания</li>
+                    <li class="countries-list__item countries-list__item--plans">Алжир</li>
+                    <li class="countries-list__item countries-list__item--plans">Ангола</li>
+                    <li class="countries-list__item countries-list__item--plans">Андорра</li>
+                    <li class="countries-list__item countries-list__item--plans">Антигуа и Барбуда</li>
+                    <li class="countries-list__item countries-list__item--plans">Аргентина</li>
+                    <li class="countries-list__item countries-list__item--plans">Армения</li>
+                    <li class="countries-list__item countries-list__item--plans">Афганистан</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Б</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Б</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Багамские Острова</li>
-                    <li class="countries-list__item">Бангладеш</li>
-                    <li class="countries-list__item">Барбадос</li>
-                    <li class="countries-list__item">Бахрейн</li>
-                    <li class="countries-list__item">Белоруссия</li>
-                    <li class="countries-list__item">Белиз</li>
-                    <li class="countries-list__item">Бельгия</li>
-                    <li class="countries-list__item">Бенин</li>
-                    <li class="countries-list__item">Болгария</li>
-                    <li class="countries-list__item">Боливия</li>
-                    <li class="countries-list__item">Босния и Герцеговина</li>
-                    <li class="countries-list__item">Ботсвана</li>
-                    <li class="countries-list__item">Бразилия</li>
-                    <li class="countries-list__item">Бруней</li>
-                    <li class="countries-list__item">Буркина-Фасо</li>
-                    <li class="countries-list__item">Бурунди</li>
-                    <li class="countries-list__item">Бутан</li>
+                    <li class="countries-list__item countries-list__item--plans">Багамские Острова</li>
+                    <li class="countries-list__item countries-list__item--plans">Бангладеш</li>
+                    <li class="countries-list__item countries-list__item--plans">Барбадос</li>
+                    <li class="countries-list__item countries-list__item--plans">Бахрейн</li>
+                    <li class="countries-list__item countries-list__item--plans">Белоруссия</li>
+                    <li class="countries-list__item countries-list__item--plans">Белиз</li>
+                    <li class="countries-list__item countries-list__item--plans">Бельгия</li>
+                    <li class="countries-list__item countries-list__item--plans">Бенин</li>
+                    <li class="countries-list__item countries-list__item--plans">Болгария</li>
+                    <li class="countries-list__item countries-list__item--plans">Боливия</li>
+                    <li class="countries-list__item countries-list__item--plans">Босния и Герцеговина</li>
+                    <li class="countries-list__item countries-list__item--plans">Ботсвана</li>
+                    <li class="countries-list__item countries-list__item--plans">Бразилия</li>
+                    <li class="countries-list__item countries-list__item--plans">Бруней</li>
+                    <li class="countries-list__item countries-list__item--plans">Буркина-Фасо</li>
+                    <li class="countries-list__item countries-list__item--plans">Бурунди</li>
+                    <li class="countries-list__item countries-list__item--plans">Бутан</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">В</button>
+                  <button class="letterfield__letter letterfield__letter--plans">В</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Вануату</li>
-                    <li class="countries-list__item">Великобритания</li>
-                    <li class="countries-list__item">Венгрия</li>
-                    <li class="countries-list__item">Венесуэла</li>
-                    <li class="countries-list__item">Восточный Тимор</li>
-                    <li class="countries-list__item">Вьетнам</li>
+                    <li class="countries-list__item countries-list__item--plans">Вануату</li>
+                    <li class="countries-list__item countries-list__item--plans">Великобритания</li>
+                    <li class="countries-list__item countries-list__item--plans">Венгрия</li>
+                    <li class="countries-list__item countries-list__item--plans">Венесуэла</li>
+                    <li class="countries-list__item countries-list__item--plans">Восточный Тимор</li>
+                    <li class="countries-list__item countries-list__item--plans">Вьетнам</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Г</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Г</button>
                   <ul class="letterfield__countries-list countries-list countries-list">
-                    <li class="countries-list__item">Габон</li>
-                    <li class="countries-list__item">Гаити</li>
-                    <li class="countries-list__item">Гайана</li>
-                    <li class="countries-list__item">Гамбия</li>
-                    <li class="countries-list__item">Гана</li>
-                    <li class="countries-list__item">Гватемала</li>
-                    <li class="countries-list__item">Гвинея</li>
-                    <li class="countries-list__item">Гвинея-Бисау</li>
-                    <li class="countries-list__item">Германия</li>
-                    <li class="countries-list__item">Гондурас</li>
-                    <li class="countries-list__item">Гренада</li>
-                    <li class="countries-list__item">Греция</li>
-                    <li class="countries-list__item">Грузия</li>
+                    <li class="countries-list__item countries-list__item--plans">Габон</li>
+                    <li class="countries-list__item countries-list__item--plans">Гаити</li>
+                    <li class="countries-list__item countries-list__item--plans">Гайана</li>
+                    <li class="countries-list__item countries-list__item--plans">Гамбия</li>
+                    <li class="countries-list__item countries-list__item--plans">Гана</li>
+                    <li class="countries-list__item countries-list__item--plans">Гватемала</li>
+                    <li class="countries-list__item countries-list__item--plans">Гвинея</li>
+                    <li class="countries-list__item countries-list__item--plans">Гвинея-Бисау</li>
+                    <li class="countries-list__item countries-list__item--plans">Германия</li>
+                    <li class="countries-list__item countries-list__item--plans">Гондурас</li>
+                    <li class="countries-list__item countries-list__item--plans">Гренада</li>
+                    <li class="countries-list__item countries-list__item--plans">Греция</li>
+                    <li class="countries-list__item countries-list__item--plans">Грузия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Д</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Д</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Дания</li>
-                    <li class="countries-list__item">Джибути</li>
-                    <li class="countries-list__item">Доминика</li>
-                    <li class="countries-list__item">Доминикана</li>
+                    <li class="countries-list__item countries-list__item--plans">Дания</li>
+                    <li class="countries-list__item countries-list__item--plans">Джибути</li>
+                    <li class="countries-list__item countries-list__item--plans">Доминика</li>
+                    <li class="countries-list__item countries-list__item--plans">Доминикана</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Е</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Е</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Египет</li>
+                    <li class="countries-list__item countries-list__item--plans">Египет</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">З</button>
+                  <button class="letterfield__letter letterfield__letter--plans">З</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Замбия</li>
-                    <li class="countries-list__item">Зимбабве</li>
+                    <li class="countries-list__item countries-list__item--plans">Замбия</li>
+                    <li class="countries-list__item countries-list__item--plans">Зимбабве</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">И</button>
+                  <button class="letterfield__letter letterfield__letter--plans">И</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Израиль</li>
-                    <li class="countries-list__item">Индия</li>
-                    <li class="countries-list__item">Индонезия</li>
-                    <li class="countries-list__item">Иордания</li>
-                    <li class="countries-list__item">Ирак</li>
-                    <li class="countries-list__item">Иран</li>
-                    <li class="countries-list__item">Ирландия</li>
-                    <li class="countries-list__item">Исландия</li>
-                    <li class="countries-list__item">Испания</li>
-                    <li class="countries-list__item">Италия</li>
+                    <li class="countries-list__item countries-list__item--plans">Израиль</li>
+                    <li class="countries-list__item countries-list__item--plans">Индия</li>
+                    <li class="countries-list__item countries-list__item--plans">Индонезия</li>
+                    <li class="countries-list__item countries-list__item--plans">Иордания</li>
+                    <li class="countries-list__item countries-list__item--plans">Ирак</li>
+                    <li class="countries-list__item countries-list__item--plans">Иран</li>
+                    <li class="countries-list__item countries-list__item--plans">Ирландия</li>
+                    <li class="countries-list__item countries-list__item--plans">Исландия</li>
+                    <li class="countries-list__item countries-list__item--plans">Испания</li>
+                    <li class="countries-list__item countries-list__item--plans">Италия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">К</button>
+                  <button class="letterfield__letter letterfield__letter--plans">К</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Кабо-Верде</li>
-                    <li class="countries-list__item">Казахстан</li>
-                    <li class="countries-list__item">Камбоджа</li>
-                    <li class="countries-list__item">Камерун</li>
-                    <li class="countries-list__item">Канада</li>
-                    <li class="countries-list__item">Катар</li>
-                    <li class="countries-list__item">Кения</li>
-                    <li class="countries-list__item">Кипр</li>
-                    <li class="countries-list__item">Киргизия</li>
-                    <li class="countries-list__item">Кирибати</li>
-                    <li class="countries-list__item">Китай</li>
-                    <li class="countries-list__item">Колумбия</li>
+                    <li class="countries-list__item countries-list__item--plans">Кабо-Верде</li>
+                    <li class="countries-list__item countries-list__item--plans">Казахстан</li>
+                    <li class="countries-list__item countries-list__item--plans">Камбоджа</li>
+                    <li class="countries-list__item countries-list__item--plans">Камерун</li>
+                    <li class="countries-list__item countries-list__item--plans">Канада</li>
+                    <li class="countries-list__item countries-list__item--plans">Катар</li>
+                    <li class="countries-list__item countries-list__item--plans">Кения</li>
+                    <li class="countries-list__item countries-list__item--plans">Кипр</li>
+                    <li class="countries-list__item countries-list__item--plans">Киргизия</li>
+                    <li class="countries-list__item countries-list__item--plans">Кирибати</li>
+                    <li class="countries-list__item countries-list__item--plans">Китай</li>
+                    <li class="countries-list__item countries-list__item--plans">Колумбия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Л</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Л</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Лаос</li>
-                    <li class="countries-list__item">Латвия</li>
-                    <li class="countries-list__item">Лесото</li>
-                    <li class="countries-list__item">Либерия</li>
-                    <li class="countries-list__item">Ливан</li>
-                    <li class="countries-list__item">Ливия</li>
-                    <li class="countries-list__item">Литва</li>
-                    <li class="countries-list__item">Лихтенштейн</li>
-                    <li class="countries-list__item">Люксембург</li>
+                    <li class="countries-list__item countries-list__item--plans">Лаос</li>
+                    <li class="countries-list__item countries-list__item--plans">Латвия</li>
+                    <li class="countries-list__item countries-list__item--plans">Лесото</li>
+                    <li class="countries-list__item countries-list__item--plans">Либерия</li>
+                    <li class="countries-list__item countries-list__item--plans">Ливан</li>
+                    <li class="countries-list__item countries-list__item--plans">Ливия</li>
+                    <li class="countries-list__item countries-list__item--plans">Литва</li>
+                    <li class="countries-list__item countries-list__item--plans">Лихтенштейн</li>
+                    <li class="countries-list__item countries-list__item--plans">Люксембург</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">М</button>
+                  <button class="letterfield__letter letterfield__letter--plans">М</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Маврикий</li>
-                    <li class="countries-list__item">Мавритания</li>
-                    <li class="countries-list__item">Мадагаскар</li>
-                    <li class="countries-list__item">Малави</li>
-                    <li class="countries-list__item">Малайзия</li>
-                    <li class="countries-list__item">Мали</li>
-                    <li class="countries-list__item">Мальдивы</li>
-                    <li class="countries-list__item">Мальта</li>
-                    <li class="countries-list__item">Марокко</li>
+                    <li class="countries-list__item countries-list__item--plans">Маврикий</li>
+                    <li class="countries-list__item countries-list__item--plans">Мавритания</li>
+                    <li class="countries-list__item countries-list__item--plans">Мадагаскар</li>
+                    <li class="countries-list__item countries-list__item--plans">Малави</li>
+                    <li class="countries-list__item countries-list__item--plans">Малайзия</li>
+                    <li class="countries-list__item countries-list__item--plans">Мали</li>
+                    <li class="countries-list__item countries-list__item--plans">Мальдивы</li>
+                    <li class="countries-list__item countries-list__item--plans">Мальта</li>
+                    <li class="countries-list__item countries-list__item--plans">Марокко</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Н</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Н</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Намибия</li>
-                    <li class="countries-list__item">Науру</li>
-                    <li class="countries-list__item">Непал</li>
-                    <li class="countries-list__item">Нигер</li>
-                    <li class="countries-list__item">Нигерия</li>
-                    <li class="countries-list__item">Нидерланды</li>
-                    <li class="countries-list__item">Никарагуа</li>
-                    <li class="countries-list__item">Новая Зеландия</li>
-                    <li class="countries-list__item">Норвегия</li>
+                    <li class="countries-list__item countries-list__item--plans">Намибия</li>
+                    <li class="countries-list__item countries-list__item--plans">Науру</li>
+                    <li class="countries-list__item countries-list__item--plans">Непал</li>
+                    <li class="countries-list__item countries-list__item--plans">Нигер</li>
+                    <li class="countries-list__item countries-list__item--plans">Нигерия</li>
+                    <li class="countries-list__item countries-list__item--plans">Нидерланды</li>
+                    <li class="countries-list__item countries-list__item--plans">Никарагуа</li>
+                    <li class="countries-list__item countries-list__item--plans">Новая Зеландия</li>
+                    <li class="countries-list__item countries-list__item--plans">Норвегия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">О</button>
+                  <button class="letterfield__letter letterfield__letter--plans">О</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">ОАЭ</li>
-                    <li class="countries-list__item">Оман</li>
+                    <li class="countries-list__item countries-list__item--plans">ОАЭ</li>
+                    <li class="countries-list__item countries-list__item--plans">Оман</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">П</button>
+                  <button class="letterfield__letter letterfield__letter--plans">П</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Пакистан</li>
-                    <li class="countries-list__item">Палау</li>
-                    <li class="countries-list__item">Панама</li>
-                    <li class="countries-list__item">Папуа - Новая Гвинея</li>
-                    <li class="countries-list__item">Парагвай</li>
-                    <li class="countries-list__item">Перу</li>
-                    <li class="countries-list__item">Польша</li>
-                    <li class="countries-list__item">Португалия</li>
+                    <li class="countries-list__item countries-list__item--plans">Пакистан</li>
+                    <li class="countries-list__item countries-list__item--plans">Палау</li>
+                    <li class="countries-list__item countries-list__item--plans">Панама</li>
+                    <li class="countries-list__item countries-list__item--plans">Папуа - Новая Гвинея</li>
+                    <li class="countries-list__item countries-list__item--plans">Парагвай</li>
+                    <li class="countries-list__item countries-list__item--plans">Перу</li>
+                    <li class="countries-list__item countries-list__item--plans">Польша</li>
+                    <li class="countries-list__item countries-list__item--plans">Португалия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Р</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Р</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Руанда</li>
-                    <li class="countries-list__item">Румыния</li>
-                    <li class="countries-list__item">Россия</li>
+                    <li class="countries-list__item countries-list__item--plans">Руанда</li>
+                    <li class="countries-list__item countries-list__item--plans">Румыния</li>
+                    <li class="countries-list__item countries-list__item--plans">Россия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">С</button>
+                  <button class="letterfield__letter letterfield__letter--plans">С</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Сальвадор</li>
-                    <li class="countries-list__item">Самоа</li>
-                    <li class="countries-list__item">Сан-Марино</li>
-                    <li class="countries-list__item">Саудовская Аравия</li>
-                    <li class="countries-list__item">Сейшелы</li>
-                    <li class="countries-list__item">Сенегал</li>
-                    <li class="countries-list__item">Сербия</li>
-                    <li class="countries-list__item">Сингапур</li>
-                    <li class="countries-list__item">Сирия</li>
-                    <li class="countries-list__item">Словакия</li>
-                    <li class="countries-list__item">Словения</li>
-                    <li class="countries-list__item">США</li>
+                    <li class="countries-list__item countries-list__item--plans">Сальвадор</li>
+                    <li class="countries-list__item countries-list__item--plans">Самоа</li>
+                    <li class="countries-list__item countries-list__item--plans">Сан-Марино</li>
+                    <li class="countries-list__item countries-list__item--plans">Саудовская Аравия</li>
+                    <li class="countries-list__item countries-list__item--plans">Сейшелы</li>
+                    <li class="countries-list__item countries-list__item--plans">Сенегал</li>
+                    <li class="countries-list__item countries-list__item--plans">Сербия</li>
+                    <li class="countries-list__item countries-list__item--plans">Сингапур</li>
+                    <li class="countries-list__item countries-list__item--plans">Сирия</li>
+                    <li class="countries-list__item countries-list__item--plans">Словакия</li>
+                    <li class="countries-list__item countries-list__item--plans">Словения</li>
+                    <li class="countries-list__item countries-list__item--plans">США</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Т</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Т</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Таджикистан</li>
-                    <li class="countries-list__item">Таиланд</li>
-                    <li class="countries-list__item">Танзания</li>
-                    <li class="countries-list__item">Того</li>
-                    <li class="countries-list__item">Тонга</li>
-                    <li class="countries-list__item">Тринидад и Тобаго</li>
-                    <li class="countries-list__item">Тувалу</li>
-                    <li class="countries-list__item">Тунис</li>
-                    <li class="countries-list__item">Туркмения</li>
-                    <li class="countries-list__item">Турция</li>
+                    <li class="countries-list__item countries-list__item--plans">Таджикистан</li>
+                    <li class="countries-list__item countries-list__item--plans">Таиланд</li>
+                    <li class="countries-list__item countries-list__item--plans">Танзания</li>
+                    <li class="countries-list__item countries-list__item--plans">Того</li>
+                    <li class="countries-list__item countries-list__item--plans">Тонга</li>
+                    <li class="countries-list__item countries-list__item--plans">Тринидад и Тобаго</li>
+                    <li class="countries-list__item countries-list__item--plans">Тувалу</li>
+                    <li class="countries-list__item countries-list__item--plans">Тунис</li>
+                    <li class="countries-list__item countries-list__item--plans">Туркмения</li>
+                    <li class="countries-list__item countries-list__item--plans">Турция</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">У</button>
+                  <button class="letterfield__letter letterfield__letter--plans">У</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Уганда</li>
-                    <li class="countries-list__item">Узбекистан</li>
-                    <li class="countries-list__item">Украина</li>
-                    <li class="countries-list__item">Уругвай</li>
+                    <li class="countries-list__item countries-list__item--plans">Уганда</li>
+                    <li class="countries-list__item countries-list__item--plans">Узбекистан</li>
+                    <li class="countries-list__item countries-list__item--plans">Украина</li>
+                    <li class="countries-list__item countries-list__item--plans">Уругвай</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Ф</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Ф</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Фиджи</li>
-                    <li class="countries-list__item">Филиппины</li>
-                    <li class="countries-list__item">Финляндия</li>
-                    <li class="countries-list__item">Франция</li>
+                    <li class="countries-list__item countries-list__item--plans">Фиджи</li>
+                    <li class="countries-list__item countries-list__item--plans">Филиппины</li>
+                    <li class="countries-list__item countries-list__item--plans">Финляндия</li>
+                    <li class="countries-list__item countries-list__item--plans">Франция</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Х</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Х</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Хорватия</li>
+                    <li class="countries-list__item countries-list__item--plans">Хорватия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Ч</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Ч</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Чад</li>
-                    <li class="countries-list__item">Черногория</li>
-                    <li class="countries-list__item">Чехия</li>
-                    <li class="countries-list__item">Чили</li>
+                    <li class="countries-list__item countries-list__item--plans">Чад</li>
+                    <li class="countries-list__item countries-list__item--plans">Черногория</li>
+                    <li class="countries-list__item countries-list__item--plans">Чехия</li>
+                    <li class="countries-list__item countries-list__item--plans">Чили</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Щ</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Щ</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Швейцария</li>
-                    <li class="countries-list__item">Швеция</li>
-                    <li class="countries-list__item">Шри-Ланка</li>
+                    <li class="countries-list__item countries-list__item--plans">Швейцария</li>
+                    <li class="countries-list__item countries-list__item--plans">Швеция</li>
+                    <li class="countries-list__item countries-list__item--plans">Шри-Ланка</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Э</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Э</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Эквадор</li>
-                    <li class="countries-list__item">Эритрея</li>
-                    <li class="countries-list__item">Эсватини</li>
-                    <li class="countries-list__item">Эстония</li>
-                    <li class="countries-list__item">Эфиопия</li>
+                    <li class="countries-list__item countries-list__item--plans">Эквадор</li>
+                    <li class="countries-list__item countries-list__item--plans">Эритрея</li>
+                    <li class="countries-list__item countries-list__item--plans">Эсватини</li>
+                    <li class="countries-list__item countries-list__item--plans">Эстония</li>
+                    <li class="countries-list__item countries-list__item--plans">Эфиопия</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Ю</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Ю</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">ЮАР</li>
-                    <li class="countries-list__item">Южный Судан</li>
+                    <li class="countries-list__item countries-list__item--plans">ЮАР</li>
+                    <li class="countries-list__item countries-list__item--plans">Южный Судан</li>
                   </ul>
                 </li>
                 <li class="letterfield__item">
-                  <button class="letterfield__letter">Я</button>
+                  <button class="letterfield__letter letterfield__letter--plans">Я</button>
                   <ul class="letterfield__countries-list countries-list">
-                    <li class="countries-list__item">Ямайка</li>
-                    <li class="countries-list__item">Япония</li>
+                    <li class="countries-list__item countries-list__item--plans">Ямайка</li>
+                    <li class="countries-list__item countries-list__item--plans">Япония</li>
                   </ul>
                 </li>
               </ul>
@@ -555,7 +555,7 @@
                 </textarea>
               </div>
               <div class="step__buttons">
-                <button class="add-plan__submit button button--oval" type="submit">Отправить</button>
+                <button class="step__button button button--oval" type="submit">Отправить</button>
                 <a class="step__back button" href="#step-2">На шаг назад</a>
               </div>
             </section>
@@ -565,7 +565,7 @@
     </main>
     <footer class="footer">
       <div class="center footer__center">
-        <a href="./index.html" class="footer__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+        <a href="./index.html" class="footer__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
         <ul class="footer__social social social--light">
           <li class="social__item"><a class="social__link social__link--facebook" href="" aria-label="Facebook"></a></li>
           <li class="social__item"><a class="social__link social__link--vkontakte" href="" aria-label="Вконтакте"></a></li>

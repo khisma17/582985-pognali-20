@@ -1,7 +1,13 @@
 .companions {
-  padding-top: 68px;
+  position: relative;
+  top: -34px;
+  z-index: 4;
+
+  margin-bottom: -34px;
+  padding-top: 102px;
 
   background-color: @basic-blue;
+  border-radius: 30px;
 
   padding-bottom: 31px;
 
@@ -30,11 +36,18 @@
 
 .companions__heading {
   margin: 0;
+  margin-bottom: 19px;
+  padding-left: 9%;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @special-orange;
+
+  @media (min-width: @tablet-width) {
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: heading;
@@ -43,32 +56,74 @@
 
 .companions__text {
   margin: 0;
+  padding-left: 9%;
+  padding-right: 11%;
 
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
 
+  @media (min-width: @tablet-width) {
+    font-size: @text-tablet-font-size;
+    line-height: @text-tablet-line-height;
+  }
+
   &:last-child {
     font-weight: @font-bold;
+    margin-top: 25px;
+    margin-bottom: 54px;
+
+    @media (min-width: @tablet-width) {
+      font-size: @cite-tablet-font-size;
+      line-height: @cite-tablet-line-height;
+    }
   }
 }
 
 .companions__button {
-  font-weight: @font-bold;
-  font-size: @button-font-size;
-  line-height: @button-line-height;
-  text-transform: uppercase;
-  color: @button-color;
+  position: relative;
+
+  width: 100%;
+  padding-top: 22px;
+  padding-right: 9%;
+  padding-bottom: 21px;
+  padding-left: 9%;
+
+  border-radius: 10px;
+
+  &--more {
+    font-weight: @font-bold;
+    font-size: @button-alt-font-size;
+    line-height: @button-alt-line-height;
+    text-transform: uppercase;
+    color: @button-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: button;
   }
 }
 
+.companions__button-icon {
+  position: absolute;
+  top: 24px;
+  right: 23px;
+
+  width: 14px;
+  height: 13px;
+}
+
 .companions__list {
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {

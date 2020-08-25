@@ -7,10 +7,10 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="body">
-    <header class="header header--opened header--nojs">
+    <header class="header header--closed">
       <div class="center header__center">
         <div class="header__wrapper">
-          <a href="" class="header__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+          <a href="" class="header__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
           <button class="header__nav-toggle" type="button"></button>
           <a class="header__login only-tablet" href="">Авторизация</a>
         </div>
@@ -37,28 +37,32 @@
     </header>
     <main class="main">
       <section class="main__active-tab">
-        <div class="center">
+        <div class="center main__center">
           <h1 class="main__heading">Попутчики</h1>
+          <a class="main__link">На главную</a>
         </div>
       </section>
-      <section class="filter">
+      <section class="filter filter--closed">
         <div class="center">
-          <h2 class="filter__heading">Фильтрация по странам:</h2>
-          <button class="filter__toggle" type="button"></button>
-          <ul class="filter__continents-list continents-list">
-            <li class="continents-list__item">
-              <button class="continents-list__button continents-list__button--active">Европа</button>
-            </li>
-            <li class="continents-list__item">
-              <button class="continents-list__button">Азия</button>
-            </li>
-            <li class="continents-list__item">
-              <button class="continents-list__button">Америка</button>
-            </li>
-            <li class="continents-list__item">
-              <button class="continents-list__button">Острова</button>
-            </li>
-          </ul>
+          <div class="filter__wrapper">
+            <h2 class="filter__heading">Фильтрация по странам:</h2>
+            <button class="filter__toggle filter__toggle--opened" type="button"><span class="filter__toggle-text">Свернуть</span></button>
+            <button class="filter__toggle filter__toggle--closed" type="button"><span class="filter__toggle-text">Показать все</span></button>
+            <ul class="filter__continents-list continents-list">
+              <li class="continents-list__item">
+                <button class="continents-list__button continents-list__button--active">Европа</button>
+              </li>
+              <li class="continents-list__item">
+                <button class="continents-list__button">Азия</button>
+              </li>
+              <li class="continents-list__item">
+                <button class="continents-list__button">Америка</button>
+              </li>
+              <li class="continents-list__item">
+                <button class="continents-list__button">Острова</button>
+              </li>
+            </ul>
+          </div>
           <ul class="filter__letterfield letterfield letterfield--filter">
             <li class="letterfield__item letterfield__item--filter">
               <button class="letterfield__letter letterfield__letter--active">А</button>
@@ -520,7 +524,7 @@
           <h2 class="form__heading">Подберите идеального попутчика</h2>
           <form class="form__form" action="https://echo.htmlacademy.ru" method="get">
             <div class="form__fieldset">
-              <h3 class="form__legend">Хобби</h3>
+              <h3 class="form__legend">Хобби<span class="form__legend-add">:</span></h3>
               <button class="form__toggle"></button>
               <ul class="form__list">
                 <li class="form__item">
@@ -538,7 +542,7 @@
               </ul>
             </div>
             <div class="form__fieldset">
-              <h3 class="form__legend">Музыка</h3>
+              <h3 class="form__legend">Музыка<span class="form__legend-add">:</span></h3>
               <button class="form__toggle"></button>
               <ul class="form__list">
                 <li class="form__item">
@@ -556,7 +560,7 @@
               </ul>
             </div>
             <div class="form__fieldset">
-              <h3 class="form__legend">Еда</h3>
+              <h3 class="form__legend">Еда<span class="form__legend-add">:</span></h3>
               <button class="form__toggle"></button>
               <ul class="form__list">
                 <li class="form__item">
@@ -574,7 +578,7 @@
               </ul>
             </div>
             <div class="form__fieldset">
-              <h3 class="form__legend">Транспорт</h3>
+              <h3 class="form__legend">Транспорт<span class="form__legend-add">:</span></h3>
               <button class="form__toggle"></button>
               <ul class="form__list form__list--transport">
                 <li class="form__item">
@@ -592,7 +596,7 @@
               </ul>
             </div>
             <div class="form__fieldset">
-              <h3 class="form__legend">Левел</h3>
+              <h3 class="form__legend">Левел<span class="form__legend-add">:</span></h3>
               <div class="form__level">
                 <div class="form__level-controls">
                   <div class="form__level-scale">
@@ -634,7 +638,7 @@
                 <li class="transport-list__item" aria-label="Пешком"><button class="transport-list__button"></button></li>
               </ul>
             </div>
-            <div class="companion-card__level-bar level-bar level-bar--transparent">
+            <div class="companion-card__level-bar level-bar level-bar--catalog">
               <span class="level-bar__text">левел</span>
               <span class="level-bar__level">99</span>
             </div>
@@ -661,7 +665,7 @@
                 <li class="transport-list__item" aria-label="Пешком"><button class="transport-list__button"></button></li>
               </ul>
             </div>
-            <div class="companion-card__level-bar level-bar level-bar--transparent">
+            <div class="companion-card__level-bar level-bar level-bar--catalog">
               <span class="level-bar__text">левел</span>
               <span class="level-bar__level">80</span>
             </div>
@@ -689,7 +693,7 @@
                 <li class="transport-list__item" aria-label="Пешком"><button class="transport-list__button"></button></li>
               </ul>
             </div>
-            <div class="companion-card__level-bar level-bar level-bar--transparent">
+            <div class="companion-card__level-bar level-bar level-bar--catalog">
               <span class="level-bar__text">левел</span>
               <span class="level-bar__level">25</span>
             </div>
@@ -716,16 +720,16 @@
                 <li class="transport-list__item" aria-label="Пешком"><button class="transport-list__button"></button></li>
               </ul>
             </div>
-            <div class="companion-card__level-bar level-bar level-bar--transparent">
+            <div class="companion-card__level-bar level-bar level-bar--catalog">
               <span class="level-bar__text">левел</span>
               <span class="level-bar__level">50</span>
             </div>
             <a class="companion-card__button button button--oval" href="invite.html">Позвать!</a>
           </article>
-          <a class="companions__button" href="companions.html">показать еще</a>
+          <a class="companions__button companions__button--more" href="companions.html">показать еще</a>
           <div class="pagination">
             <div class="pagination__pages">
-              <button class="pagination__button pagination__button--page" type="button">1</button>
+              <button class="pagination__button pagination__button--page pagination__button--active" type="button">1</button>
               <button class="pagination__button pagination__button--page" type="button">2</button>
               <button class="pagination__button pagination__button--page" type="button">3</button>
               <button class="pagination__button pagination__button--page" type="button">4</button>
@@ -740,7 +744,7 @@
     </main>
     <footer class="footer">
       <div class="center footer__center">
-        <a href="./index.html" class="footer__logo logo logo--light"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
+        <a href="./index.html" class="footer__logo logo logo--dark"><img src="https://via.placeholder.com/96x15" alt="Логотип сервиса Погнали?" width="96" height="15"></a>
         <ul class="footer__social social social--light">
           <li class="social__item"><a class="social__link social__link--facebook" href="" aria-label="Facebook"></a></li>
           <li class="social__item"><a class="social__link social__link--vkontakte" href="" aria-label="Вконтакте"></a></li>

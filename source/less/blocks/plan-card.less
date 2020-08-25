@@ -2,6 +2,11 @@
   font-weight: @font-bold;
   font-size: @text-alt-font-size;
   line-height: @text-alt-line-height;
+
+  @media (min-width: @tablet-width) {
+    font-size: @button-tablet-font-size;
+    line-height: @button-tablet-line-height;
+  }
 }
 
 .plan-card__text {
@@ -9,6 +14,12 @@
   font-size: @details-font-size;
   line-height: @details-line-height;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+    letter-spacing: 0.1em;
+  }
 }
 
 .plan-card__link {
@@ -17,4 +28,10 @@
   line-height: @details-line-height;
   text-transform: uppercase;
   color: @special-light-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+    letter-spacing: 0.1em;
+  }
 }

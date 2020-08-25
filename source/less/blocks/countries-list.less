@@ -30,4 +30,15 @@
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @alt-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @countries-tablet-font-size;
+    line-height: @countries-tablet-line-height;
+  }
+
+  &--plans {
+    @media (min-width: @tablet-width) {
+      line-height: @alt-line-height;
+    }
+  }
 }

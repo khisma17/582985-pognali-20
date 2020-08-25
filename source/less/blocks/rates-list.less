@@ -2,7 +2,9 @@
   list-style: none;
 
   margin: 0;
+  margin-bottom: 46px;
   padding: 0;
+  padding-left: 9%;
 
   font-weight: @font-light;
   font-size: @text-alt-font-size;
@@ -10,14 +12,37 @@
   color: @alt-text-color;
 
   counter-reset: rates;
+
+  @media (min-width: @tablet-width) {
+    font-size: @contacts-tablet-font-size;
+    line-height: @contacts-tablet-line-height;
+  }
 }
 
 .rates-list__item {
   counter-increment: rates;
 
+  position: relative;
+
+  width: 75%;
+
   &::after {
     content: counter(rates);
+
+    position: absolute;
+    top: -11px;
+    right: -63px;
+
+    width: 34px;
+    height: 34px;
+    padding-top: 10px;
+    padding-right: 13px;
+    padding-bottom: 11px;
+    padding-left: 13px;
+
     color: @basic-white;
+
+    border-radius: 50%;
   }
 
   &:first-child::after {
@@ -34,13 +59,17 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
 .rates-list__service {
   margin: 0;
+  margin-bottom: 6px;
 }
 
 .rates-list__price {
   margin: 0;
+  margin-bottom: 31px;
 }

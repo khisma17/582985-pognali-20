@@ -1,16 +1,19 @@
 .button {
+  display: block;
+
   background-color: @button-background;
 
   font-weight: @font-bold;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: @button-font-size;
+  line-height: @button-line-height;
   color: @button-color;
 
-  &--oval {
-    text-transform: uppercase;
-    font-size: @button-font-size;
-    line-height: 17px;
+  @media (min-width: @tablet-width) {
+    font-size: @button-tablet-font-size;
+    line-height: @button-tablet-line-height;
+  }
 
+  &--oval {
     border-radius: 25px;
   }
 
@@ -18,8 +21,6 @@
     background-color: @special-button-blue;
 
     text-transform: uppercase;
-    font-size: @counter-font-size;
-    line-height: @counter-line-height;
     color: @basic-blue;
 
     border-radius: 20px;

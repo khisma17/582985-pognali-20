@@ -1,68 +1,104 @@
 .companion-card {
+  position: relative;
+
   display: grid;
-  grid-template: "image" auto
-    "destinations" auto
-    "name" auto
-    "hashtags" auto
-    "transport" auto / 100%;
-  background-color: @basic-white;
+  grid-template-areas: "image"
+    "destinations"
+    "name"
+    "hashtags"
+    "transport";
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, auto);
 
   margin-bottom: 10px;
+  padding-bottom: 20px;
+
+  background-color: @basic-white;
+  border-radius: 10px;
 
   &--detailed {
-    grid-template: "image name name" auto
-      "image followers followers" auto
-      "hashtags hashtags hashtags" auto
-      "destinations destinations destinations" auto
-      "transport transport level" auto
-      "button button button" auto / auto 1fr auto;
+    grid-template-areas: "image name name"
+      "image followers followers"
+      "hashtags hashtags hashtags"
+      "destinations destinations destinations"
+      "transport transport level"
+      "button button button";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(5, auto);
+
+    @media (min-width: @tablet-width) {
+      grid-template-areas: "image name name transport"
+        "image hashtags hashtags transport"
+        "image button followers level"
+        "destinations destinations destinations destinations";
+      grid-template-columns: repeat(2, auto) 1fr auto;
+      grid-template-rows: repeat(4);
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-areas: "image name name destinations destinations"
+        "image hashtags hashtags destinations destinations"
+        "image button followers transport level";
+      grid-template-columns: repeat(2, auto) 1fr repeat(2, auto);
+      grid-template-rows: repeat(3, auto);
+    }
+
+    .companion-card__name {
+      font-size: @alt-font-size;
+      line-height: @alt-line-height;
+
+      @media (min-width: @tablet-width) {
+        font-size: @alt-tablet-font-size;
+        line-height: @alt-tablet-line-height;
+      }
+    }
+
+    .companion-card__hashtags {
+      font-size: @additional-text-font-size;
+      line-height: 18px;
+
+      @media (min-width: @tablet-width) {
+        font-size: @hashtags-tablet-font-size;
+        line-height: @hashtags-tablet-line-height;
+      }
+    }
 
     .companion-card__level-bar {
       grid-area: level;
       position: static;
     }
 
-    @media (min-width: @tablet-width) {
-      grid-template: "image name name transport" auto
-        "image hashtags hashtags transport" auto
-        "image button followers level" auto
-        "destinations destinations destinations destinations" auto / auto auto 1fr auto;
-
-      .companion-card__intro--transport {
+    .companion-card__intro--transport {
+      @media (min-width: @tablet-width) {
         display: none;
       }
     }
 
-    @media (min-width: @desktop-width) {
-      grid-template: "image name name destinations destinations" auto
-        "image hashtags hashtags destinations destinations" auto
-        "image button followers transport level" auto / auto auto 1fr auto auto;
-
-      .companion-card__intro--destinations {
+    .companion-card__intro--destinations {
+      @media (min-width: @tablet-width) {
         display: none;
       }
     }
-  }
-
-  &--detailed .companion-card__name {
-    font-size: @companion-font-size;
-    line-height: @companion-line-height;
-  }
-
-  &--detailed .companion-card__hashtags {
-    font-size: @additional-text-font-size;
-    line-height: 18px;
   }
 }
 
 .companion-card__image-link {
   grid-area: image;
+
+  line-height: 0;
+}
+
+.companion-card__image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .companion-card__level-bar {
   grid-area: image;
 
   position: absolute;
+  top: 17px;
+  left: 6%;
 }
 
 .companion-card__destinations-wrapper {
@@ -75,6 +111,30 @@
 
 .companion-card__link {
   grid-area: name;
+
+  position: relative;
+
+  margin: 0 auto;
+  margin-top: 13px;
+  margin-bottom: 15px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -10px;
+    top: 8px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: @special-light-red;
+    border-radius: 50%;
+  }
+
+  &--online::before {
+    background-color: @special-bright-green;
+  }
 }
 
 .companion-card__name {
@@ -84,16 +144,30 @@
   font-size: @name-font-size;
   line-height: @name-line-height;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @name-tablet-font-size;
+    line-height: @name-tablet-line-height;
+  }
 }
 
 .companion-card__hashtags {
   grid-area: hashtags;
 
   margin: 0;
+  margin-left: 17%;
+  margin-right: 13%;
+  margin-bottom: 14px;
 
   font-size: @text-special-font-size;
   line-height: @text-special-line-height;
+  text-align: center;
   color: @alt-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @hashtags-tablet-font-size;
+    line-height: @hashtags-tablet-line-height;
+  }
 }
 
 .companion-card__transport-wrapper {
@@ -114,6 +188,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic-dark-blue;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }
 
 .companion-card__intro {
@@ -126,4 +205,12 @@
 
 .companion-card__button {
   grid-area: button;
+
+  font-size: @form-button-font-size;
+  line-height: @form-button-line-height;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }
