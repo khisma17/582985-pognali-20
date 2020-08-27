@@ -11,6 +11,16 @@
 
   padding-bottom: 31px;
 
+  @media (min-width: @tablet-width) {
+    top: -67px;
+
+    padding-top: 208px;
+    padding-bottom: 87px;
+    margin-bottom: -67px;
+
+    border-radius: 60px;
+  }
+
   &--catalog {
     background-color: @basic-lighter-gray;
   }
@@ -21,6 +31,11 @@
   background-repeat: no-repeat;
   background-size: 143px 143px, 71px 71px;
   background-position: top right, center left;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 
   @media (min-width: @desktop-width) {
     display: grid;
@@ -45,6 +60,9 @@
   color: @special-orange;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    padding-left: 0;
+
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
   }
@@ -65,6 +83,9 @@
   color: @text-color;
 
   @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 30%;
+
     font-size: @text-tablet-font-size;
     line-height: @text-tablet-line-height;
   }
@@ -75,6 +96,10 @@
     margin-bottom: 54px;
 
     @media (min-width: @tablet-width) {
+      margin-top: 39px;
+      margin-bottom: 63px;
+      padding-right: 57%;
+
       font-size: @cite-tablet-font-size;
       line-height: @cite-tablet-line-height;
     }
@@ -91,6 +116,14 @@
   padding-left: 9%;
 
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 5%;
+
+    border-radius: 20px;
+  }
 
   &--more {
     font-weight: @font-bold;
@@ -117,6 +150,11 @@
 
   width: 14px;
   height: 13px;
+
+  @media (min-width: @tablet-width) {
+    top: 33px;
+    right: 35px;
+  }
 }
 
 .companions__list {

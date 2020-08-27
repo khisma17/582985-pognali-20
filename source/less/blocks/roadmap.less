@@ -1,4 +1,8 @@
 .roadmap {
+  background-color: @basic-blue;
+}
+
+.roadmap__list {
   list-style: none;
 
   margin: 0;
@@ -10,15 +14,20 @@
   line-height: @roadmap-line-height;
   color: @basic-dark-blue;
 
-  background-color: @basic-blue;
-
   counter-reset: roadmap;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    top: -136px;
+
+    margin-bottom: -136px;
+    padding-bottom: 96px;
 
     font-size: @heading-font-size;
     line-height: @heading-line-height;
@@ -27,7 +36,6 @@
 
 .roadmap__item {
   position: relative;
-  top: -80px;
 
   display: flex;
   flex-direction: row;
@@ -39,9 +47,23 @@
   padding-right: 8%;
   padding-bottom: 102px;
   padding-left: 9%;
-  margin-bottom: -80px;
 
   border-radius: 10px;
+
+  @media (max-width: @mobile-width-only) {
+    top: -80px;
+
+    margin-bottom: -80px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 140px;
+    padding-top: 30px;
+    padding-bottom: 21px;
+    padding-left: 33px;
+
+    flex-direction: column;
+  }
 
   &:first-child {
     background-color: @basic-orange;
@@ -52,27 +74,36 @@
   }
 
   &:nth-child(3) {
-    padding-bottom: 76px;
+    @media (max-width: @mobile-width-only) {
+      padding-bottom: 76px;
+    }
 
     background-color: @special-yellow;
   }
 
   &:last-child {
-    top: -60px;
+    @media (max-width: @mobile-width-only) {
+      top: -60px;
 
-    padding-bottom: 24px;
-    margin-bottom: -60px;
+      padding-bottom: 24px;
+      margin-bottom: -60px;
+    }
 
     background-color: @basic-yellow;
   }
 
-  @media (min-width: @tablet-width) {
-    &:nth-child(2n - 1) {
+  &:nth-child(2n - 1) {
+    @media (min-width: @tablet-width) {
       width: 53%;
     }
+  }
 
-    &:nth-child(2n) {
+  &:nth-child(2n) {
+    @media (min-width: @tablet-width) {
       width: 50%;
+      left: -21px;
+
+      margin-right: -21px;
     }
   }
 
@@ -85,6 +116,8 @@
     color: @basic-white;
 
     @media (min-width: @tablet-width) {
+      margin-top: auto;
+
       font-size: @alt-tablet-font-size;
       line-height: @alt-tablet-line-height;
     }
@@ -99,4 +132,8 @@
 .roadmap__text {
   width: 62%;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 68%;
+  }
 }

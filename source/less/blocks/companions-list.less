@@ -2,5 +2,22 @@
   list-style: none;
 
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 81px;
+  }
+}
+
+.companions-list__item {
+  @media (min-width: @tablet-width) {
+    width: 285px;
+  }
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      margin-right: 50px;
+    }
+  }
 }

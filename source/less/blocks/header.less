@@ -44,7 +44,8 @@
       height: 19px;
     }
 
-    .header__nav-toggle::before, .header__nav-toggle::after {
+    .header__nav-toggle::before,
+    .header__nav-toggle::after {
       content: "";
       position: absolute;
       top: 8px;
@@ -63,15 +64,18 @@
       transform: rotate(-45deg);
     }
 
-    .header__nav-toggle:hover::before, .header__nav-toggle:hover::after {
+    .header__nav-toggle:hover::before,
+    .header__nav-toggle:hover::after {
       background-color: @special-button-hover-gray;
     }
 
-    .header__nav-toggle:focus::before, .header__nav-toggle:focus::after {
+    .header__nav-toggle:focus::before,
+    .header__nav-toggle:focus::after {
       background-color: @special-button-hover-gray;
     }
 
-    .header__nav-toggle:hover::before, .header__nav-toggle:hover::after {
+    .header__nav-toggle:active::before,
+    .header__nav-toggle:active::after {
       background-color: @special-button-active-gray;
     }
 
@@ -89,6 +93,7 @@
       width: 25px;
       height: 11px;
     }
+
     .header__nav-toggle::before {
       content: "";
       position: absolute;
@@ -142,6 +147,8 @@
 
   @media (min-width: @desktop-width) {
     margin-right: auto;
+    padding-top: 46px;
+    padding-bottom: 11px;
   }
 }
 
@@ -163,16 +170,8 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 42px;
-  }
-
   @media (min-width: @desktop-width) {
     flex-direction: row;
-
-    padding-top: 46px;
-    padding-bottom: 11px  ;
   }
 }
 

@@ -16,6 +16,11 @@
   background-color: @basic-white;
   border-radius: 10px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 24px;
+  }
+
   &--detailed {
     grid-template-areas: "image name name"
       "image followers followers"
@@ -53,16 +58,6 @@
       }
     }
 
-    .companion-card__hashtags {
-      font-size: @additional-text-font-size;
-      line-height: 18px;
-
-      @media (min-width: @tablet-width) {
-        font-size: @hashtags-tablet-font-size;
-        line-height: @hashtags-tablet-line-height;
-      }
-    }
-
     .companion-card__level-bar {
       grid-area: level;
       position: static;
@@ -91,6 +86,11 @@
 .companion-card__image {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .companion-card__level-bar {
@@ -117,6 +117,11 @@
   margin: 0 auto;
   margin-top: 13px;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+    margin-bottom: 23px;
+  }
 
   &::before {
     content: "";
@@ -165,6 +170,10 @@
   color: @alt-text-color;
 
   @media (min-width: @tablet-width) {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 24px;
+
     font-size: @hashtags-tablet-font-size;
     line-height: @hashtags-tablet-line-height;
   }

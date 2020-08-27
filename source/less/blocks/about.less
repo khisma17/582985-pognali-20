@@ -5,10 +5,19 @@
   background-position: center right;
 
   padding-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+  }
 }
 
 .about__center {
   padding-left: 9%;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 40%;
+    padding-left: 10%;
+  }
 }
 
 .about__heading {
@@ -21,6 +30,8 @@
   color: @section-heading-color;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
   }
@@ -28,7 +39,7 @@
 
 .about__text {
   margin: 0;
-  padding-right: 13%;
+  padding-right: 20%;
 
   font-weight: @font-light;
   font-size: @text-font-size;
@@ -50,6 +61,9 @@
     font-weight: @font-bold;
 
     @media (min-width: @tablet-width) {
+      margin-top: 31px;
+      margin-bottom: 52px;
+
       font-size: @cite-tablet-font-size;
       line-height: @cite-tablet-line-height;
     }
@@ -61,5 +75,25 @@
     @media (max-width: @mobile-width-only) {
       display: none;
     }
+
+    @media (min-width: @tablet-width) {
+      position: relative;
+
+      width: 72%;
+      padding-top: 29px;
+      padding-bottom: 27px;
+      padding-left: 12%;
+
+      border-radius: 20px;
+    }
   }
+}
+
+.about__button-icon {
+  position: absolute;
+  top: 33px;
+  right: 36px;
+
+  width: 14px;
+  height: 14px;
 }

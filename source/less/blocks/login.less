@@ -10,9 +10,17 @@
   background-color: @basic-blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: @tablet-width) {
+    top: -57px;
+
+    margin-bottom: -57px;
+    padding-top: 133px;
+  }
 }
 
 .login__heading {
+  margin: 0;
   padding-left: 11%;
   padding-right: 11%;
 
@@ -22,6 +30,8 @@
   color: @section-heading-color;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
   }
@@ -40,8 +50,12 @@
   color: @text-color;
 
   @media (min-width: @tablet-width) {
+    padding-left: 5%;
+    padding-right: 2%;
+
     font-size: @text-tablet-font-size;
     line-height: @text-tablet-line-height;
+    text-align: cent;
   }
 
   @media (min-width: @desktop-width) {
@@ -98,15 +112,15 @@
 }
 
 .login__button {
-    position: relative;
-    left: -10px;
+  position: relative;
+  left: -10px;
 
-    width: 60px;
-    height: 62px;
+  width: 60px;
+  height: 62px;
 
 
-    border: none;
-    border-radius: 10px;
+  border: none;
+  border-radius: 10px;
 
   &--desktop {
     display: none;

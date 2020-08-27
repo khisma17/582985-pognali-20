@@ -6,6 +6,12 @@
 
   background-color: @basic-dark-blue;
   border-radius: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 89px;
+
+    border-radius: 60px;
+  }
 }
 
 .promo__motto-background {
@@ -42,6 +48,7 @@
 }
 
 .promo__quote {
+  width: 60%;
   margin: 0;
 
   font-weight: @font-light;
@@ -50,6 +57,8 @@
   color: @text-color;
 
   @media (min-width: @tablet-width) {
+    width: 40%;
+
     font-size: @text-tablet-font-size;
     line-height: @text-tablet-line-height;
   }
@@ -114,19 +123,12 @@
   }
 }
 
-.promo__about {
-  @media (min-width: @tablet-width) {
-    padding-right: 50%;
-  }
-}
-
 .promo__blockquote {
-  width: 60%;
   padding-top: 28px;
   padding-bottom: 109px;
+  padding-left: 5%;
 
   @media (min-width: @tablet-width) {
-    width: 38%;
     padding-top: 76px;
     padding-bottom: 350px;
   }

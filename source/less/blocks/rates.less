@@ -10,6 +10,16 @@
   padding-top: 106px;
   padding-bottom: 38px;
 
+  @media (min-width: @tablet-width) {
+    top: -61px;
+
+    margin-bottom: -61px;
+    padding-top: 135px;
+    padding-bottom: 85px;
+
+    border-radius: 60px;
+  }
+
   &::after {
     content: "";
 
@@ -23,6 +33,12 @@
     background-image: url("../img/rates@1x.png");
     background-size: 100px 100px;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: auto;
+      bottom: 45px;
+      right: 85px;
+    }
   }
 }
 
@@ -39,8 +55,13 @@
   color: @section-heading-color;
 
   @media (min-width: @tablet-width) {
+    width: auto;
+    margin-bottom: 94px;
+    padding: 0;
+
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
+    text-align: center;
 
     background-size: 0;
   }
@@ -55,6 +76,8 @@
   color: @special-rates-blue;
 
   @media (min-width: @tablet-width) {
+    padding-left: 13%;
+
     font-size: @text-alt-tablet-font-size;
     line-height: @text-alt-tablet-line-height;
   }
