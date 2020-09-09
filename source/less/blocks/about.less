@@ -9,14 +9,24 @@
   @media (min-width: @tablet-width) {
     padding-top: 41px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 132px;
+  }
 }
 
 .about__center {
-  padding-left: 9%;
+  padding-left: 49px;
+  padding-right: 60px;
 
   @media (min-width: @tablet-width) {
-    padding-right: 40%;
-    padding-left: 10%;
+    padding-left: 74px;
+    padding-right: 385px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 690px;
   }
 }
 
@@ -35,11 +45,14 @@
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .about__text {
   margin: 0;
-  padding-right: 20%;
 
   font-weight: @font-light;
   font-size: @text-font-size;
@@ -67,6 +80,11 @@
       font-size: @cite-tablet-font-size;
       line-height: @cite-tablet-line-height;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 38px;
+      margin-bottom: 85px;
+    }
   }
 }
 
@@ -79,12 +97,16 @@
     @media (min-width: @tablet-width) {
       position: relative;
 
-      width: 72%;
+      width: 89%;
       padding-top: 29px;
       padding-bottom: 27px;
-      padding-left: 12%;
+      padding-left: 33px;
 
       border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 44%;
     }
   }
 }

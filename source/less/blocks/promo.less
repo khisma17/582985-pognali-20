@@ -5,30 +5,25 @@
   padding-bottom: 82px;
 
   background-color: @basic-dark-blue;
-  border-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 89px;
 
-    border-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
-}
 
-.promo__motto-background {
-  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: 192px 255px, cover;
-  background-position: 63% bottom, center -95px;
-
-  @media (min-width: @tablet-width) {
-    background-size: 0, 0;
+  @media (min-width: @desktop-width) {
+    padding-bottom: 165px;
   }
 }
 
 .promo__motto {
   margin: 0;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-bottom: 265px;
 
   font-weight: @font-bold;
@@ -38,17 +33,25 @@
   color: @text-color;
 
   @media (min-width: @tablet-width) {
-    padding-left: 21%;
-    padding-right: 21%;
+    padding-left: 145px;
+    padding-right: 144px;
     padding-bottom: 10px;
 
     font-size: @heading-tablet-font-size;
     line-height: @heading-tablet-line-height;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 35%;
+    padding-left: 67px;
+    padding-right: 0;
+
+    text-align: left;
+  }
 }
 
 .promo__quote {
-  width: 60%;
+  width: 65%;
   margin: 0;
 
   font-weight: @font-light;
@@ -64,6 +67,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
+
     line-height: @text-desktop-line-height;
   }
 }
@@ -100,6 +105,14 @@
     @media (min-width: @tablet-width) {
       display: none;
     }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+
+      position: absolute;
+      top: -61px;
+      right: 60px;
+    }
   }
 }
 
@@ -119,17 +132,26 @@
     flex-direction: row;
     justify-content: flex-start;
 
-    padding-right: 0;
+    padding-top: 99px;
   }
 }
 
 .promo__blockquote {
   padding-top: 28px;
   padding-bottom: 109px;
-  padding-left: 5%;
+  padding-left: 25px;
 
   @media (min-width: @tablet-width) {
     padding-top: 76px;
     padding-bottom: 350px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 21.5%;
+    margin-left: auto;
+    padding-top: 9px;
+    padding-right: 23px;
+    padding-left: 0;
   }
 }

@@ -4,8 +4,8 @@
   z-index: 2;
 
   margin-bottom: -33px;
-  padding-top: 105px;
-  padding-bottom: 44px;
+  padding-top: 103px;
+  padding-bottom: 40px;
 
   background-color: @basic-blue;
   border-bottom-left-radius: 30px;
@@ -15,14 +15,26 @@
     top: -57px;
 
     margin-bottom: -57px;
-    padding-top: 133px;
+    padding-top: 128px;
+    padding-bottom: 77px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -99px;
+
+    margin-bottom: -99px;
+    padding-top: 204px;
+    padding-bottom: 139px;
   }
 }
 
 .login__heading {
   margin: 0;
-  padding-left: 11%;
-  padding-right: 11%;
+  margin-bottom: 19px;
+  text-align: center;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
@@ -31,35 +43,48 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 59px;
+    margin-left: 149px;
 
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+
+    text-align: center;
   }
 }
 
 .login__text {
   margin: 0;
-  padding-left: 10%;
-  padding-right: 11%;
+  padding-right: 30px;
+  padding-left: 24px;
 
-  text-align: center;
 
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding-left: 5%;
-    padding-right: 2%;
+    padding-right: 14px;
 
     font-size: @text-tablet-font-size;
     line-height: @text-tablet-line-height;
-    text-align: cent;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+
     line-height: @text-desktop-line-height;
+  }
+
+  &:nth-of-type(2) {
+    margin-top: -2px;
+    padding-left: 19px;
   }
 
   &--inline {
@@ -69,14 +94,52 @@
       line-height: 30px;
     }
   }
+
+  &:nth-of-type(3) {
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 348px;
+    }
+  }
+
+  &:last-of-type {
+    @media (min-width: @tablet-width) {
+      padding-left: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      letter-spacing: 0.01em;
+    }
+  }
 }
 
 .login__form {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+
   margin-top: 29px;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    margin-bottom: 60px;
+    margin-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 62px;
+    margin-right: 74px;
+    margin-bottom: 68px;
+    margin-left: 72px;
+    padding-right: 0;
+  }
 }
 
 .login__login {
@@ -85,14 +148,28 @@
 }
 
 .login__email {
+  flex-grow: 1;
+
   display: block;
 
   width: 81%;
   padding: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 25px;
 
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 36px;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 }
 
 .login__email::placeholder {
@@ -117,20 +194,44 @@
 
   width: 60px;
   height: 62px;
-
+  margin-right: -10px;
+  padding-top: 24px;
+  padding-right: 22px;
+  padding-bottom: 24px;
+  padding-left: 22px;
 
   border: none;
   border-radius: 10px;
 
-  &--desktop {
-    display: none;
+  @media (min-width: @tablet-width) {
+    left: 0;
+
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
 
-    &--desktop {
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
       display: inline;
+
+      width: 30.5%;
+      padding-top: 22px;
+      padding-right: 0;
+      padding-left: 36px;
+
+      font-size: 21px;
+      text-align: left;
     }
   }
 }
@@ -140,6 +241,13 @@
   top: 24px;
   right: 22px;
 
-  width: 14px;
-  height: 13px;
+  width: 16px;
+  height: 14px;
+
+  @media (min-width: @tablet-width) {
+    top: 34px;
+    right: 33px;
+
+    height: 16px;
+  }
 }

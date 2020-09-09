@@ -3,12 +3,26 @@
 
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .directions-list__item {
   &:last-child {
     .directions-list__card {
       margin-bottom: 0;
+    }
+
+    .directions-list__wrapper {
+      padding-bottom: 6px;
     }
   }
 }
@@ -20,6 +34,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 560px;
   }
 }
 
@@ -42,8 +60,8 @@
   flex-wrap: wrap;
 
   padding-top: 26px;
-  padding-bottom: 24px;
-  padding-left: 9%;
+  padding-bottom: 22px;
+  padding-left: 25px;
 
   background-color: @basic-white;
   border-radius: 10px;
@@ -52,7 +70,7 @@
     top: -17px;
 
     margin-bottom: -17px;
-    padding-right: 9%;
+    padding-right: 24px;
   }
 
   @media (min-width: @tablet-width) {
@@ -64,16 +82,24 @@
 
     padding-top: 30px;
     padding-bottom: 20px;
-    padding-left: 4%;
+    padding-left: 28px;
 
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 24px;
+    padding-bottom: 21px;
+    padding-left: 30px;
+  }
 }
 
 .directions-list__link {
-  margin-right: 30%;
+  display: block;
+  width: 35%;
+  margin-right: 100px;
   margin-bottom: 2px;
 
   @media (min-width: @tablet-width) {
@@ -96,6 +122,7 @@
 }
 
 .directions-list__description {
+  width: 64%;
   margin: 0;
 
   font-weight: @font-medium;
@@ -104,10 +131,14 @@
   color: @special-light-gray;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 17px;
+    margin-bottom: 19px;
 
     font-size: @text-alt-tablet-font-size;
     line-height: @text-alt-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 26px;
   }
 }
 
@@ -119,6 +150,8 @@
 
   @media (min-width: @tablet-width) {
     order: 1;
+
+    padding-left: 32px;
 
     font-size: @text-alt-tablet-font-size;
     line-height: @text-alt-tablet-line-height;

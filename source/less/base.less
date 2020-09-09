@@ -18,7 +18,11 @@ svg {
 }
 
 .body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
   min-width: @mobile-width;
+  min-height: 100%;
   margin: 0;
 
   font-family: @basic-font-family;
@@ -67,6 +71,14 @@ svg {
   display: none;
 
   @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.only-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
     display: block;
   }
 }

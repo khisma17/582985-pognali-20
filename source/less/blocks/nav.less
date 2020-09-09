@@ -8,12 +8,16 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 53px;
+    padding-bottom: 73px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
+    padding-top: 0;
+    padding-bottom: 0;
 
     background-color: @basic-dark-blue;
   }
@@ -33,8 +37,8 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 169px;
-    padding-left: 8%;
+    margin-bottom: 150px;
+    padding-left: 57px;
 
     font-size: @nav-tablet-font-size;
     line-height: @nav-tablet-line-height;
@@ -46,8 +50,21 @@
     flex-direction: row;
     justify-content: flex-start;
 
+    margin-bottom: 0;
+    padding-left: 0;
+
     font-size: @alt-font-size;
     line-height: @alt-line-height;
+  }
+}
+
+.nav__item {
+  @media (min-width: @desktop-width) {
+    margin-right: 33px;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 

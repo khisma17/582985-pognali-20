@@ -1,5 +1,16 @@
 .main__active-tab {
+  padding-top: 8px;
+
   background-color: @special-map-blue;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 87px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .main__center {
@@ -7,6 +18,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 75px;
+  }
 
   &--catalog {
     flex-direction: column;
@@ -21,7 +36,7 @@
 .main__heading {
   margin: 0;
 
-  padding-bottom: 12px;
+  padding-bottom: 14px;
 
   border-bottom: solid 4px @basic-orange;
 
@@ -31,6 +46,8 @@
   color: @tab-heading-color;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 68px;
+
     font-size: @tab-tablet-font-size;
     line-height: @tab-tablet-line-height;
   }
@@ -87,4 +104,15 @@
   height: 424px;
 
   margin-bottom: -52px;
+
+  @media (min-width: @tablet-width) {
+    height: 586px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -122px;
+
+    height: 584px;
+    margin-bottom: -122px;
+  }
 }

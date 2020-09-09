@@ -3,7 +3,7 @@
 
   margin: 0;
   padding: 0;
-  padding-left: 23%;
+  padding-left: 60px;
 
   font-weight: @font-bold;
   font-size: @text-special-font-size;
@@ -11,24 +11,8 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding-left: 22%;
-  }
+    padding-left: 90px;
 
-  &--login {
-    margin-top: 30px;
-
-    line-height: @text-line-height;
-
-    .contacts-list__item {
-      margin-bottom: 23px;
-    }
-  }
-
-  &--menu {
-    margin-bottom: 53px;
-  }
-
-  @media (min-width: @tablet-width) {
     font-size: @contacts-tablet-font-size;
     line-height: @contacts-tablet-line-height;
   }
@@ -37,6 +21,54 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+  }
+
+  &--login {
+    margin-top: 30px;
+
+    line-height: @text-line-height;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 64px;
+      padding-left: 125px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 78px;
+      margin-left: 345px;
+      padding-left: 0;
+    }
+
+    .contacts-list__item {
+      margin-bottom: 23px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 39px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        @media (min-width: @desktop-width) {
+          margin-right: 231px;
+        }
+      }
+    }
+  }
+
+  &--menu {
+    margin-bottom: 53px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 57px;
+      margin-bottom: 133px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -47,6 +79,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 
   &:last-child {
@@ -72,6 +108,14 @@
 
       width: 68px;
       height: 68px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -34px;
+      left: -121px;
+
+      width: 90px;
+      height: 90px;
     }
   }
 }
@@ -103,6 +147,14 @@
       width: 24px;
       height: 22px;
     }
+
+    @media (min-width: @desktop-width) {
+      top: 0;
+      left: -92px;
+
+      width: 31px;
+      height: 30px;
+    }
   }
 
   &--mail {
@@ -118,6 +170,14 @@
 
       width: 28px;
       height: 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 3px;
+      left: -93px;
+
+      width: 37px;
+      height: 25px;
     }
   }
 }

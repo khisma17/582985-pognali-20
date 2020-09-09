@@ -12,3 +12,35 @@
     display: none;
   }
 }
+
+.plan-pagination__item {
+  width: 5px;
+  margin-right: 16px;
+}
+
+.plan-pagination__button {
+  position: relative;
+
+  padding: 0;
+
+  border: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: @special-gray-blue;
+    border-radius: 50%;
+  }
+
+  &--active {
+    &::before {
+      background-color: @button-color;
+    }
+  }
+}

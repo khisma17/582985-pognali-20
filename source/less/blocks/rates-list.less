@@ -2,9 +2,9 @@
   list-style: none;
 
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 40px;
   padding: 0;
-  padding-left: 9%;
+  padding-left: 24px;
 
   font-weight: @font-light;
   font-size: @text-alt-font-size;
@@ -15,11 +15,16 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 70px;
-    padding-left: 13%;
-    padding-right: 5%;
+    padding-left: 90px;
+    padding-right: 34px;
 
     font-size: @contacts-tablet-font-size;
     line-height: @contacts-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 161px;
+    padding-right: 345px;
   }
 }
 
@@ -67,6 +72,10 @@
       padding-bottom: 24px;
       padding-left: 27px;
     }
+
+    @media (min-width: @desktop-width) {
+      top: -20px;
+    }
   }
 
   &:last-child {
@@ -81,10 +90,18 @@
 
   &:nth-child(2)::after {
     background-color: @special-yellow;
+
+    @media (min-width: @desktop-width) {
+      top: -18px;
+    }
   }
 
   &:last-child::after {
     background-color: @basic-yellow;
+
+    @media (min-width: @desktop-width) {
+      top: -16px;
+    }
   }
 }
 
@@ -95,7 +112,7 @@
 
 .rates-list__price {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
   margin-left: auto;
 
   @media (min-width: @tablet-width) {

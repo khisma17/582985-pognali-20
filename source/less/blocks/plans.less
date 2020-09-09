@@ -1,8 +1,27 @@
 .plans {
+  position: relative;
+  top: -30px;
+
+  margin-bottom: -30px;
+  padding-top: 26px;
+  padding-bottom: 59px;
+
   background-color: @basic-light-blue;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.plans__list {
+  list-style-position: inside;
+
+  padding: 0;
+  margin: 0;
 }
 
 .plans__heading {
+  margin: 0;
+  margin-bottom: 31px;
+
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
@@ -15,12 +34,28 @@
 }
 
 .plans__item {
-  background-color: @basic-white;
+  margin-bottom: 10px;
+  padding-top: 21px;
+  padding-bottom: 23px;
+  padding-left: 25px;
 
   font-weight: @font-medium;
   font-size: @text-alt-font-size;
   line-height: @text-alt-line-height;
   color: @title-color;
 
+  background-color: @basic-white;
   border-radius: 10px;
+
+  &::marker {
+    display: inline;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.plans__card {
+  display: inline;
 }

@@ -1,6 +1,30 @@
 .filter {
   background-color: @special-light-blue;
 
+  &--nojs {
+    .filter__toggle {
+      display: none;
+    }
+
+    .filter__continents-list {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      .filter__continents-list {
+        display: flex;
+      }
+    }
+
+    .filter__letterfield {
+      display: none;
+    }
+
+    .filter__button {
+      display: none;
+    }
+  }
+
   &--opened {
     .filter__toggle--closed {
       display: none;
@@ -20,10 +44,8 @@
       display: none;
     }
 
-    @media (min-width: @mobile-width-only) {
-      .filter__continents-list {
-        display: none;
-      }
+    .filter__continents-list {
+      display: none;
     }
 
     @media (min-width: @tablet-width) {

@@ -23,12 +23,19 @@
     background-position: right top;
     border-radius: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 235px;
+    padding-bottom: 138px;
+
+    border-radius: 56px;
+  }
 }
 
 .directions__heading {
   margin: 0;
   margin-bottom: 19px;
-  padding-left: 9%;
+  padding-left: 25px;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
@@ -37,7 +44,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
-    padding-left: 0;
+    padding-left: 33px;
 
     font-size: @section-tablet-font-size;
     line-height: @section-tablet-line-height;
@@ -45,14 +52,17 @@
 
   @media (min-width: @desktop-width) {
     grid-area: heading;
+
+    margin-bottom: 62px;
+    padding-left: 0;
   }
 }
 
 .directions__text {
   margin: 0;
   margin-bottom: 60px;
-  padding-left: 9%;
-  padding-right: 11%;
+  padding-left: 24px;
+  padding-right: 30px;
 
   font-weight: @font-light;
   font-size: @text-font-size;
@@ -61,8 +71,8 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 104px;
-    padding-left: 0;
-    padding-right: 42%;
+    padding-left: 35px;
+    padding-right: 275px;
 
     font-size: @text-tablet-font-size;
     line-height: @text-tablet-line-height;
@@ -70,15 +80,13 @@
 
   @media (min-width: @desktop-width) {
     grid-area: text;
+
+    margin-bottom: 101px;
+    padding: 0;
   }
 }
 
 .directions__center {
-  @media (min-width: @tablet-width) {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 560px 378px;
@@ -88,6 +96,8 @@
       "list text"
       "list button";
     column-gap: 170px;
+
+    padding-left: 130px;
   }
 }
 
@@ -100,26 +110,36 @@
 .directions__button {
   position: relative;
 
-  width: 100%;
   margin-top: 25px;
   padding-top: 22px;
-  padding-right: 9%;
-  padding-bottom: 22px;
-  padding-left: 9%;
+  padding-right: 23px;
+  padding-left: 23px;
 
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
     margin-top: 48px;
+    margin-right: 37px;
+    margin-left: 35px;
     padding-top: 31px;
     padding-bottom: 27px;
-    padding-left: 5%;
+    padding-left: 33px;
+    padding-right: 32px;
 
     border-radius: 20px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: button;
+
+    width: 73%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 3px;
+    padding-top: 29px;
+    padding-right: 36px;
+    padding-bottom: 27px;
+    padding-left: 33px;
   }
 }
 
