@@ -1,20 +1,56 @@
 .plan-card__heading {
+  display: inline;
+
+  margin-left: -4px;
+
   font-weight: @font-bold;
   font-size: @text-alt-font-size;
   line-height: @text-alt-line-height;
+
+  @media (min-width: @tablet-width) {
+    font-size: @button-tablet-font-size;
+    line-height: @button-tablet-line-height;
+  }
 }
 
 .plan-card__text {
+  margin: 0;
+  margin-left: 2px;
+
   font-weight: @font-medium;
   font-size: @details-font-size;
   line-height: @details-line-height;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+    letter-spacing: 0.1em;
+  }
+
+  &:first-of-type {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 22px;
+  }
 }
 
 .plan-card__link {
+  margin-left: 2px;
+
   font-weight: @font-medium;
   font-size: @details-font-size;
   line-height: @details-line-height;
   text-transform: uppercase;
   color: @special-light-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+    letter-spacing: 0.1em;
+  }
 }

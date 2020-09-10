@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 
   list-style: none;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   &--catalog {
@@ -16,5 +17,27 @@
     @media (min-width: @desktop-width) {
       flex-direction: row;
     }
+  }
+}
+
+.transport-list__item {
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.transport-list__button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  color: @special-very-light-gray;
+
+  background-color: @basic-white;
+  border: none;
+  border-radius: 50%;
+
+  &--active {
+    color: @button-color;
   }
 }

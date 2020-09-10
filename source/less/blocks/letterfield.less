@@ -38,6 +38,20 @@
   text-transform: uppercase;
   color: @button-color;
 
+  @media (min-width: @tablet-width) {
+    font-size: @tab-tablet-font-size;
+    line-height: @tab-tablet-line-height;
+  }
+
+  &--plans {
+    line-height: @text-special-line-height;
+
+    @media (min-width: @tablet-width) {
+      font-size: @text-alt-tablet-font-size;
+      line-height: @text-alt-tablet-line-height;
+    }
+  }
+
   &--active {
     background-color: @special-blue;
 
@@ -52,6 +66,7 @@
 .letterfield__item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;

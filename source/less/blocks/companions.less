@@ -1,9 +1,34 @@
 .companions {
-  padding-top: 68px;
+  position: relative;
+  top: -34px;
+  z-index: 4;
+
+  margin-bottom: -34px;
+  padding-top: 102px;
 
   background-color: @basic-blue;
+  border-radius: 30px;
 
   padding-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    top: -67px;
+
+    padding-top: 208px;
+    padding-bottom: 87px;
+    margin-bottom: -67px;
+
+    border-radius: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -101px;
+
+    margin-bottom: -101px;
+    padding-top: 227px;
+    padding-bottom: 134px;
+    border-radius: 56px;
+  }
 
   &--catalog {
     background-color: @basic-lighter-gray;
@@ -16,6 +41,11 @@
   background-size: 143px 143px, 71px 71px;
   background-position: top right, center left;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 427px 1fr;
@@ -24,17 +54,30 @@
       "heading list"
       "text list"
       "button list";
-    column-gap: 190px;
+    column-gap: 193px;
+
+    padding-left: 130px;
+    padding-right: 60px;
   }
 }
 
 .companions__heading {
   margin: 0;
+  margin-bottom: 19px;
+  padding-left: 25px;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @special-orange;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    padding-left: 0;
+
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: heading;
@@ -43,32 +86,108 @@
 
 .companions__text {
   margin: 0;
+  padding-left: 25px;
+  padding-right: 30px;
 
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 190px;
+
+    font-size: @text-tablet-font-size;
+    line-height: @text-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
+
   &:last-child {
     font-weight: @font-bold;
+    margin-top: 21px;
+    margin-bottom: 54px;
+
+    @media (min-width: @tablet-width) {
+      width: 42%;
+      margin-top: 39px;
+      margin-bottom: 63px;
+      padding-right: 0;
+
+      font-size: @cite-tablet-font-size;
+      line-height: @cite-tablet-line-height;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      margin-top: 42px;
+      margin-bottom: 85px;
+    }
   }
 }
 
 .companions__button {
-  font-weight: @font-bold;
-  font-size: @button-font-size;
-  line-height: @button-line-height;
-  text-transform: uppercase;
-  color: @button-color;
+  position: relative;
+
+  width: 100%;
+  padding-top: 22px;
+  padding-right: 23px;
+  padding-bottom: 21px;
+  padding-left: 23px;
+
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 32px;
+
+    border-radius: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: button;
+
+    width: 65.5%;
+    margin-left: 1px;
+  }
+
+  &--more {
+    font-weight: @font-bold;
+    font-size: @button-alt-font-size;
+    line-height: @button-alt-line-height;
+    text-transform: uppercase;
+    color: @button-color;
+  }
+}
+
+.companions__button-icon {
+  position: absolute;
+  top: 24px;
+  right: 23px;
+
+  width: 14px;
+  height: 13px;
+
+  @media (min-width: @tablet-width) {
+    top: 33px;
+    right: 35px;
   }
 }
 
 .companions__list {
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,24 +1,144 @@
 .login {
+  position: relative;
+  top: -33px;
+  z-index: 2;
+
+  margin-bottom: -33px;
+  padding-top: 103px;
+  padding-bottom: 40px;
+
   background-color: @basic-blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @media (min-width: @tablet-width) {
+    top: -57px;
+
+    margin-bottom: -57px;
+    padding-top: 128px;
+    padding-bottom: 77px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -99px;
+
+    margin-bottom: -99px;
+    padding-top: 204px;
+    padding-bottom: 139px;
+  }
 }
 
 .login__heading {
+  margin: 0;
+  margin-bottom: 19px;
+  text-align: center;
+
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @section-heading-color;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+    margin-left: 149px;
+
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+
+    text-align: center;
+  }
 }
 
 .login__text {
+  margin: 0;
+  padding-right: 30px;
+  padding-left: 24px;
+
+
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 14px;
+
+    font-size: @text-tablet-font-size;
+    line-height: @text-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+
+    line-height: @text-desktop-line-height;
+  }
+
+  &:nth-of-type(2) {
+    margin-top: -2px;
+    padding-left: 19px;
+  }
 
   &--inline {
     @media (min-width: @tablet-width) {
       display: inline-block;
+
+      line-height: 30px;
     }
+  }
+
+  &:nth-of-type(3) {
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 348px;
+    }
+  }
+
+  &:last-of-type {
+    @media (min-width: @tablet-width) {
+      padding-left: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin-top: 29px;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    margin-bottom: 60px;
+    margin-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 62px;
+    margin-right: 74px;
+    margin-bottom: 68px;
+    margin-left: 72px;
+    padding-right: 0;
   }
 }
 
@@ -27,23 +147,107 @@
   color: @alt-link-color;
 }
 
+.login__email {
+  flex-grow: 1;
+
+  display: block;
+
+  width: 81%;
+  padding: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 36px;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
 .login__email::placeholder {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
   font-weight: @font-bold;
   font-size: @roadmap-font-size;
   line-height: @roadmap-line-height;
   color: @special-light-gray;
+
+  @media (min-width: @tablet-width) {
+    font-size: @button-tablet-font-size;
+    line-height: @button-tablet-line-height;
+  }
 }
 
 .login__button {
-  &--desktop {
-    display: none;
+  position: relative;
+  left: -10px;
+
+  width: 60px;
+  height: 62px;
+  margin-right: -10px;
+  padding-top: 24px;
+  padding-right: 22px;
+  padding-bottom: 24px;
+  padding-left: 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
 
-    &--desktop {
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
       display: inline;
+
+      width: 30.5%;
+      padding-top: 22px;
+      padding-right: 0;
+      padding-left: 36px;
+
+      font-size: 21px;
+      text-align: left;
     }
+  }
+}
+
+.login__button-icon {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+
+  width: 16px;
+  height: 14px;
+
+  @media (min-width: @tablet-width) {
+    top: 34px;
+    right: 33px;
+
+    height: 16px;
   }
 }

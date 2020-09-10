@@ -6,6 +6,7 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -17,6 +18,15 @@
   font-size: @text-special-font-size;
   line-height: @text-special-line-height;
   color: @special-active-blue-gray;
+  text-transform: uppercase;
+
+  background-color: @special-light-blue;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: @alt-font-size;
+    line-height: @alt-line-height;
+  }
 
   &--active {
     color: @link-color;

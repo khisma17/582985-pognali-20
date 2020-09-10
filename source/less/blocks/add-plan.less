@@ -1,5 +1,14 @@
 .add-plan {
+  position: relative;
+  top: -29px;
+
+  margin-bottom: -29px;
+  padding-top: 28px;
+  padding-bottom: 143px;
+
   background-color: @special-medium-blue;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .add-plan__center {
@@ -7,13 +16,51 @@
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .add-plan__heading {
-  width: 80%;
+  width: 63%;
+  margin: 0;
+  margin-right: 36px;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @plans-tablet-font-size;
+    line-height: @plans-tablet-line-height;
+  }
+}
+
+.add-plan__form {
+  margin-top: 29px;
+}
+
+.add-plan__step {
+  margin-bottom: 10px;
+
+  padding-top: 24px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+
+  border-radius: 10px;
+
+  &:first-child {
+    padding-bottom: 23px;
+  }
+
+  &:last-child {
+    .step__heading {
+      margin-bottom: 13px;
+    }
+
+    .step__text {
+      width: 95%;
+      margin-bottom: 23px;
+    }
+  }
 }

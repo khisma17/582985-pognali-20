@@ -7,13 +7,18 @@
   font-size: 22px;
   line-height: @text-line-height;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @alt-tablet-font-size;
+    line-height: @alt-tablet-line-height;
+  }
 }
 
 .form__fieldset {
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
+    justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,6 +31,28 @@
   font-size: @text-special-font-size;
   line-height: @text-special-line-height;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-weight: @font-medium;
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: @text-line-height;
+  }
+}
+
+.form__legend-add {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .form__toggle {
@@ -59,6 +86,11 @@
   font-size: @additional-text-font-size;
   line-height: 20px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }
 
 .form__level-input {
@@ -66,8 +98,23 @@
   font-size: @details-font-size;
   line-height: 13px;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }
 
 .form__button {
+  font-size: @form-button-font-size;
+  line-height: @form-button-line-height;
+  color: @basic-dark-blue;
+
   background-color: @basic-white;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
 }

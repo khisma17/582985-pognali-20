@@ -1,5 +1,7 @@
 .pagination {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 
   background-color: @basic-white;
 }
@@ -7,5 +9,25 @@
 .pagination__pages {
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+}
+
+.pagination__button {
+  font-weight: @font-bold;
+  font-size: @text-alt-tablet-font-size;
+  line-height: @text-alt-tablet-line-height;
+  color: @button-color;
+
+  background-color: @basic-white;
+  border: none;
+
+  &--active {
+    padding-top: 17px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 19px;
+
+    background-color: @button-background;
+    border-radius: 50%;
   }
 }

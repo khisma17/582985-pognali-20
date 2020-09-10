@@ -1,35 +1,109 @@
 .rates {
+  position: relative;
+  top: -53px;
+  z-index: 3;
+
   background-color: @basic-light-gray;
+  border-radius: 30px;
 
-  padding-top: 37px;
+  margin-bottom: -53px;
+  padding-top: 106px;
   padding-bottom: 38px;
-}
 
-.rates__center {
-  padding-left: 49px;
+  @media (min-width: @tablet-width) {
+    top: -61px;
+
+    margin-bottom: -61px;
+    padding-top: 135px;
+    padding-bottom: 85px;
+
+    border-radius: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -68px;
+
+    margin-bottom: -68px;
+    padding-top: 171px;
+    padding-bottom: 189px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    top: 90px;
+    right: 25px;
+
+    background-image: url("../img/rates@1x.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: auto;
+      bottom: 45px;
+      right: 85px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 265px;
+      right: 133px;
+
+      width: 198px;
+      height: 198px;
+      background-size: 198px 198px;
+    }
+  }
 }
 
 .rates__heading {
+  width: 40%;
+
   margin: 0;
+  margin-bottom: 56px;
+  padding-left: 25px;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @section-heading-color;
 
-  background-image: url("../img/rates@1x.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 100px 100px;
-
   @media (min-width: @tablet-width) {
-    background-size: 0 0;
+    width: auto;
+    margin-bottom: 94px;
+    padding: 0;
+
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+    text-align: center;
+
+    background-size: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 155px;
   }
 }
 
 .rates__link {
+  padding-left: 25px;
+
   font-weight: @font-bold;
   font-size: @text-alt-font-size;
   line-height: @text-alt-line-height;
   color: @special-rates-blue;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 89px;
+
+    font-size: @text-alt-tablet-font-size;
+    line-height: @text-alt-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 160px;
+  }
 }

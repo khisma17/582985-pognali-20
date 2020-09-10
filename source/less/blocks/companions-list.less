@@ -2,5 +2,31 @@
   list-style: none;
 
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    padding-top: 8px;
+  }
+}
+
+.companions-list__item {
+  @media (min-width: @tablet-width) {
+    width: 46%;
+  }
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      margin-right: 50px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 60px;
+    }
+  }
 }

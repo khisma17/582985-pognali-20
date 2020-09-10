@@ -1,9 +1,21 @@
 .calendar {
+  width: 100%;
+
   font-size: @title-font-size;
   line-height: @title-line-height;
+  text-align: center;
+
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    font-size: @calendar-tablet-font-size;
+    line-height: @calendar-tablet-line-height;
+  }
 }
 
 .calendar__header-cell {
+  padding-bottom: 7px;
+
   font-weight: @font-normal;
   text-transform: uppercase;
   color: @alt-text-color;
@@ -17,7 +29,22 @@
   }
 }
 
+.calendar__header-extended {
+  display: none;
+
+  text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
 .calendar__day {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 7px;
+
   color: @special-light-gray;
 
   border: 1px solid @special-calendar-gray;
@@ -32,5 +59,15 @@
     background-color: @special-blue;
 
     color: @basic-white;
+  }
+}
+
+.calendar__day-memo {
+  display: none;
+
+  line-height: @alt-line-height;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }

@@ -5,30 +5,117 @@
   background-position: center right;
 
   padding-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 132px;
+  }
+}
+
+.about__center {
+  padding-left: 49px;
+  padding-right: 60px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 74px;
+    padding-right: 385px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 690px;
+  }
 }
 
 .about__heading {
   margin: 0;
+  margin-bottom: 19px;
 
   font-weight: @font-bold;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   color: @section-heading-color;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+
+    font-size: @section-tablet-font-size;
+    line-height: @section-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .about__text {
+  margin: 0;
+
   font-weight: @font-light;
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
 
-  &:last-child {
+  @media (min-width: @tablet-width) {
+    font-size: @text-tablet-font-size;
+    line-height: @text-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: @about-desktop-line-height;
+  }
+
+  &:last-of-type {
+    margin-top: 20px;
+
     font-weight: @font-bold;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 31px;
+      margin-bottom: 52px;
+
+      font-size: @cite-tablet-font-size;
+      line-height: @cite-tablet-line-height;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 38px;
+      margin-bottom: 85px;
+    }
   }
 }
 
 .about__button {
-  @media (max-width: @mobile-width-only) {
-    display: none;
+  &.button {
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      position: relative;
+
+      width: 89%;
+      padding-top: 29px;
+      padding-bottom: 27px;
+      padding-left: 33px;
+
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 44%;
+    }
   }
+}
+
+.about__button-icon {
+  position: absolute;
+  top: 33px;
+  right: 36px;
+
+  width: 14px;
+  height: 14px;
 }

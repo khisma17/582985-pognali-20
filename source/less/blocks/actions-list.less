@@ -1,40 +1,118 @@
 .actions-list {
   list-style: none;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
   margin: 0;
   padding: 0;
 }
 
 .actions-list__item {
-  &:first-child {
-    background-color: @basic-orange;
-  }
+  &--login {
+    width: 70%;
+    padding-top: 11px;
+    padding-right: 28px;
+    padding-bottom: 9px;
+    padding-left: 29px;
 
-  &:first-child::before {
-    content: "";
-    width: 40px;
-    height: 40px;
-  }
+    font-weight: @font-bold;
+    font-size: @alt-font-size;
+    line-height: @alt-line-height;
+    text-transform: uppercase;
+    text-align: center;
 
-  &:nth-child(2) {
-    background-color: @special-yellow;
-  }
-
-  &:nth-child(2)::before {
-    content: "";
-    width: 40px;
-    height: 40px;
-  }
-
-  &:last-child {
     background-color: @basic-yellow;
+    border-radius: 25px;
+
+    @media (min-width: @desktop-width) {
+      padding-top: 16px;
+      padding-bottom: 14px;
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    padding-top: 13px;
+    padding-right: 12px;
+    padding-bottom: 11px;
+    padding-left: 12px;
+
+    background-color: @basic-orange;
+    border-radius: 50%;
+
+    @media (min-width: @desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--phone::before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 11px;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      top: 17px;
+      left: 17px;
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    padding-top: 14px;
+    padding-right: 12px;
+    padding-bottom: 13px;
+    padding-left: 12px;
+
+    background-color: @special-yellow;
+    border-radius: 50%;
+
+    @media (min-width: @desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--email::before {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+    left: 12px;
+
+    width: 16px;
+    height: 12px;
+
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 16px 12px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: @desktop-width) {
+      top: 19px;
+      left: 18px;
+    }
   }
 }
 
 .actions-list__link {
-  font-weight: @font-bold;
-  font-size: @button-font-size;
-  line-height: 20px;
-  text-transform: uppercase;
   color: @basic-dark-blue;
 }
