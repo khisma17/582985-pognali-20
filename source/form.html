@@ -7,7 +7,7 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="body">
-    <header class="header header--nojs">
+    <header class="header header--closed">
       <div class="center header__center">
         <div class="header__wrapper">
           <a href="" class="header__logo header__logo--light">
@@ -59,7 +59,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="main__active-tab">
+      <section class="main__active-tab main__active-tab--form">
         <div class="center main__center">
           <h1 class="main__heading">Направления</h1>
           <div class="main__level-bar level-bar level-bar--form"><span class="level-bar__level">80</span><span class="level-bar__text">level</span></div>
@@ -89,7 +89,7 @@
                 <svg class="transport-list__icon" width="21" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg></button>
               </li>
               <li class="transport-list__item" aria-label="Автотранспорт"><button class="transport-list__button transport-list__button--active">
-                <svg class="transport-list__icon" width="17" height="19" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg></button>
+                <svg class="transport-list__icon transport-list__icon--bus" width="17" height="19" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg></button>
               </li>
               <li class="transport-list__item" aria-label="Велосипед"><button class="transport-list__button">
                 <svg class="transport-list__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg></button>
@@ -102,23 +102,27 @@
         </div>
       </section>
       <section class="plans">
-        <div class="center">
+        <div class="center plans__center">
           <h2 class="plans__heading">Мои планы:</h2>
           <ol class="plans__list">
             <li class="plans__item">
               <article class="plans__card plan-card">
                 <h3 class="plan-card__heading">Франция, Италия</h3>
-                <p class="plan-card__text">3 попутчика</p>
-                <p class="plan-card__text">26 мар &mdash; 29 мар</p>
-                <a class="plan-card__link" href="modify.html">Изменить</a>
+                <div class="plan-card__wrapper">
+                  <p class="plan-card__text">3 попутчика</p>
+                  <p class="plan-card__text">26 мар &mdash; 29 мар</p>
+                  <a class="plan-card__link" href="modify.html">Изменить</a>
+                </div>
               </article>
             </li>
             <li class="plans__item">
               <article class="plans__card plan-card">
                 <h3 class="plan-card__heading">Таиланд, Индонезия</h3>
-                <p class="plan-card__text">1 попутчик</p>
-                <p class="plan-card__text">1 июл &mdash; 15 июл</p>
-                <a class="plan-card__link" href="modify.html">Изменить</a>
+                <div class="plan-card__wrapper">
+                  <p class="plan-card__text">1 попутчик</p>
+                  <p class="plan-card__text">1 июл &mdash; 15 июл</p>
+                  <a class="plan-card__link" href="modify.html">Изменить</a>
+                </div>
               </article>
             </li>
           </ol>
@@ -137,7 +141,7 @@
               <div class="step__header">
                 <div class="step__wrapper">
                   <h3 class="step__heading" id="step-1">Шаг 1. Даты&nbsp;пребывания</h3>
-                  <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                  <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                 </div>
                 <ul class="step__navigation">
                   <li class="step__navigation-item"><a class="step__navigation-link step__navigation-link--active">Даты</a></li>
@@ -147,26 +151,26 @@
               </div>
               <ul class="step__list">
                 <li class="step__companions">
-                  <label class="step__label" for="companions">
+                  <div class="step__label">
                     <span class="step__label-main">Ищу попутчиков:</span>
                     <span class="step__unit">Чел.</span>
-                  </label>
-                  <p class="step__number-field">
-                    <button class="step__number-controls step__number-controls--down"></button>
-                    <input class="step__number" type="number" name="companions" id="companions" value="2">
-                    <button class="step__number-controls step__number-controls--up"></button>
-                  </p>
+                    <p class="step__number-field">
+                      <button class="step__number-controls step__number-controls--down"></button>
+                      <input class="step__number" type="number" name="companions" id="companions" value="2">
+                      <button class="step__number-controls step__number-controls--up"></button>
+                    </p>
+                  </div>
                 </li>
                 <li class="step__duration">
-                  <label class="step__label" for="duration">
+                  <div class="step__label">
                     <span class="step__label-main">Длительность:</span>
                     <span class="step__unit">Дн.</span>
-                  </label>
-                  <p class="step__number-field">
-                    <button class="step__number-controls step__number-controls--down"></button>
-                    <input class="step__number" type="number" name="duration" id="duration" value="2">
-                    <button class="step__number-controls step__number-controls--up"></button>
-                  </p>
+                    <p class="step__number-field">
+                      <button class="step__number-controls step__number-controls--down"></button>
+                      <input class="step__number" type="number" name="duration" id="duration" value="2">
+                      <button class="step__number-controls step__number-controls--up"></button>
+                    </p>
+                  </div>
                 </li>
                 <li class="step__children">
                   <input class="step__checkbox" type="checkbox" name="children" id="children" checked>
@@ -175,11 +179,11 @@
                 <li class="step__dates">
                   <div class="step__calendar-wrapper">
                     <button class="step__controls step__controls--left">
-                      <svg width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/></svg>
+                      <svg class="step__icon" width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/></svg>
                     </button>
                     <h4 class="step__month">Март 2019</h4>
                     <button class="step__controls step__controls--right">
-                      <svg width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/></svg>
+                      <svg class="step__icon" width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/></svg>
                     </button>
                   </div>
                   <table class="step__calendar calendar">
@@ -232,7 +236,7 @@
                       <td class="calendar__day">23</td>
                       <td class="calendar__day">24</td>
                       <td class="calendar__day">25</td>
-                      <td class="calendar__day calendar__day--future calendar__day--active">26<p class="calendar__day-memo">Заезд</p></td>
+                      <td class="calendar__day calendar__day--future calendar__day--active calendar__day--select">26<p class="calendar__day-memo">Заезд</p></td>
                       <td class="calendar__day calendar__day--future calendar__day--active">27</td>
                       <td class="calendar__day calendar__day--future calendar__day--active">28<p class="calendar__day-memo">Выезд</p></td>
                       <td class="calendar__day calendar__day--future">29</td>
@@ -275,7 +279,7 @@
                 <h4 class="step__input step__input--dropdown">Выберите страну</h4>
                 <button class="step__toggle" type="button"></button>
               </div>
-              <ul class="step__dropdown step__dropdown--closed letterfield">
+              <ul class="step__dropdown step__dropdown--opened letterfield">
                 <li class="letterfield__item">
                   <button class="letterfield__letter letterfield__letter--plans letterfield__letter--active-plans">А</button>
                   <ul class="letterfield__countries-list letterfield__countries-list--active countries-list">
@@ -585,15 +589,15 @@
               </div>
               <div class="step__wrapper">
                 <label class="step__label step__label--actions" for="actions-1">Босния и Герцеговина</label>
-                <textarea class="step__textarea" name="actions-1" id="actions-1" rows="9" placeholder="План действий"></textarea>
+                <textarea class="step__textarea" name="actions-1" id="actions-1" placeholder="План действий"></textarea>
               </div>
               <div class="step__wrapper">
                 <label class="step__label step__label--actions" for="actions-1">Чехия</label>
-                <textarea class="step__textarea" name="actions-2" id="actions-2" rows="9">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
+                <textarea class="step__textarea" name="actions-2" id="actions-2">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и&nbsp;вот это все.
                 </textarea>
               </div>
               <div class="step__buttons">
-                <button class="step__button button button--oval" type="submit">Отправить</button>
+                <button class="step__button step__button--submit button button--oval" type="submit">Отправить</button>
                 <a class="step__back button" href="#step-2">На шаг назад</a>
               </div>
             </section>

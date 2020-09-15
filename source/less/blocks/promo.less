@@ -5,8 +5,20 @@
   padding-bottom: 82px;
 
   background-color: @basic-dark-blue;
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-size: 100% 402px;
+  background-repeat: no-repeat;
+  background-position: center -16px;
+
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../../img/globe-back-mobile@2x.jpg");
+      background-size: 640px auto;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 89px;

@@ -11,6 +11,10 @@
     font-size: @calendar-tablet-font-size;
     line-height: @calendar-tablet-line-height;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .calendar__header-cell {
@@ -19,6 +23,16 @@
   font-weight: @font-normal;
   text-transform: uppercase;
   color: @alt-text-color;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 21px;
+    padding-left: 18px;
+  }
 
   &:nth-child(6) {
     color: @special-dark-orange;
@@ -39,6 +53,18 @@
   }
 }
 
+.calendar__week {
+  &:nth-child(6) {
+    .calendar__day {
+      @media (min-width: @desktop-width) {
+        padding-top: 5px;
+        padding-bottom: 12px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
 .calendar__day {
   padding-top: 7px;
   padding-bottom: 5px;
@@ -48,6 +74,20 @@
   color: @special-light-gray;
 
   border: 1px solid @special-calendar-gray;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 26px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 14%;
+    padding-top: 12px;
+    padding-bottom: 41px;
+    padding-left: 17px;
+  }
 
   &--future {
     background-color: @basic-lighter-gray;
@@ -60,6 +100,21 @@
 
     color: @basic-white;
   }
+
+  &--select {
+    @media (min-width: @tablet-width) {
+      padding-top: 23px;
+      padding-right: 25px;
+      padding-bottom: 24px;
+      padding-left: 25px;
+
+      border: 4px solid @special-dark-orange;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 14px;
+    }
+  }
 }
 
 .calendar__day-memo {
@@ -69,5 +124,8 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+
+    margin: 0;
+    margin-top: 8px;
   }
 }
