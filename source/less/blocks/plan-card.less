@@ -1,3 +1,11 @@
+.plan-card {
+  @media (min-width: @desktop-width) {
+    display: inline-flex;
+
+    width: 97.5%;
+  }
+}
+
 .plan-card__heading {
   display: inline;
 
@@ -8,8 +16,35 @@
   line-height: @text-alt-line-height;
 
   @media (min-width: @tablet-width) {
+    display: block;
+
+    margin: 0;
+    margin-bottom: 51px;
+    margin-left: 3px;
+
     font-size: @button-tablet-font-size;
     line-height: @button-tablet-line-height;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 25px;
+    margin-right: auto;
+  }
+}
+
+.plan-card__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-flex;
+
+    width: 51.5%;
+    padding-top: 3px;
   }
 }
 
@@ -32,10 +67,25 @@
   &:first-of-type {
     margin-top: 20px;
     margin-bottom: 5px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
   }
 
   &:last-of-type {
     margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 78px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 119px;
+    }
   }
 }
 

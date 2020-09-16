@@ -11,14 +11,14 @@
   grid-template-rows: repeat(5, auto);
 
   margin-bottom: 10px;
-  padding-bottom: 18px;
+  padding-bottom: 17px;
 
   background-color: @basic-white;
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
 
     border-radius: 20px;
   }
@@ -33,13 +33,26 @@
     grid-template-columns: auto 1fr auto;
     grid-template-rows: repeat(5, auto);
 
+    padding-top: 13px;
+    padding-right: 22px;
+    padding-bottom: 22px;
+    padding-left: 18px;
+
+    border-radius: 20px;
+
     @media (min-width: @tablet-width) {
       grid-template-areas: "image name name transport"
         "image hashtags hashtags transport"
         "image button followers level"
         "destinations destinations destinations destinations";
-      grid-template-columns: repeat(2, auto) auto 1fr;
+      grid-template-columns: repeat(2, auto) 1fr auto;
       grid-template-rows: repeat(4, auto);
+
+      margin-bottom: 40px;
+      padding-top: 30px;
+      padding-right: 25px;
+      padding-bottom: 25px;
+      padding-left: 35px;
     }
 
     @media (min-width: @desktop-width) {
@@ -48,6 +61,233 @@
         "image button followers transport level";
       grid-template-columns: repeat(2, auto) 1fr repeat(2, auto);
       grid-template-rows: repeat(3, auto);
+      align-items: start;
+
+      margin-bottom: 31px;
+      padding-top: 0;
+      padding-right: 43px;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+
+    &:nth-of-type(2) {
+      .companion-card__destinations {
+        margin-bottom: 15px;
+
+        @media (min-width: @tablet-width) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      margin-bottom: 11px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 42px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 30px;
+      }
+
+      .companion-card__destinations {
+        margin-bottom: 14px;
+
+        @media (min-width: @tablet-width) {
+          margin-bottom: 0;
+          margin-top: 17px;
+        }
+
+        @media (min-width: @desktop-width) {
+          margin-top: 45px;
+          margin-left: -7px;
+        }
+      }
+
+      .destinations-list__item {
+        @media (min-width: @tablet-width) {
+          margin-right: 19px;
+        }
+      }
+
+      .companion-card__button {
+        margin-top: 9px;
+
+        @media (min-width: @tablet-width) {
+          margin-top: 11px;
+        }
+
+        @media (min-width: @desktop-width) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 16px;
+      padding-bottom: 26px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 49px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 64px;
+        padding-bottom: 1px;
+      }
+
+      .companion-card__link {
+        &::before {
+          @media (min-width: @tablet-width) {
+            top: 11px;
+            right: 11px;
+
+            background-color: @special-bright-green;
+          }
+        }
+      }
+
+      .companion-card__button {
+        margin-top: 17px;
+
+        @media (min-width: @tablet-width) {
+          margin-top: 11px;
+        }
+      }
+
+      .companion-card__destinations {
+        margin-bottom: 16px;
+
+        @media (min-width: @tablet-width) {
+          margin-bottom: -1px;
+        }
+      }
+
+      .companion-card__level-bar {
+        padding-top: 5px;
+        padding-left: 21px;
+
+        @media (min-width: @tablet-width) {
+          padding-top: 12px;
+        }
+      }
+
+      .destinations-list__item {
+        @media (min-width: @tablet-width) {
+          margin-right: 22px;
+        }
+
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .companion-card__image-link {
+      position: relative;
+
+      margin-top: 2px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 5px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-top: 0;
+      }
+    }
+
+    .companion-card__image {
+      border-radius: 50%;
+
+      @media (min-width: @tablet-width) {
+        width: 190px;
+        height: 190px;
+
+        border-radius: 20px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 285px;
+        height: 285px;
+
+        border-radius: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+    }
+
+    .companion-card__like {
+      position: absolute;
+      top: -8px;
+      left: -36px;
+
+      width: 31px;
+      height: 31px;
+
+      background-color: @special-light-blue;
+      border: none;
+      border-radius: 50%;
+
+      @media (min-width: @tablet-width) {
+        top: -15px;
+        left: -56px;
+
+        width: 50px;
+        height: 50px;
+      }
+
+      &--active {
+        color: @special-red;
+
+        background-color: @special-pink;
+      }
+    }
+
+    .companion-card__like-icon {
+      @media (min-width: @tablet-width) {
+        width: 20px;
+        height: 17px;
+      }
+    }
+
+    .companion-card__link {
+      position: static;
+
+      width: 45%;
+      margin: 0;
+      margin-bottom: 1px;
+      margin-left: 16px;
+
+      @media (min-width: @tablet-width) {
+        position: relative;
+
+        width: 70%;
+        margin-left: 33px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: 62px;
+        margin-top: 44px;
+      }
+
+      &::before {
+        top: 23px;
+        left: auto;
+        right: 22px;
+
+        @media (min-width: @tablet-width) {
+          top: 14px;
+          right: 53px;
+        }
+
+        @media (min-width: @desktop-width) {
+          top: 13px;
+          left: -26px;
+          right: auto;
+        }
+      }
     }
 
     .companion-card__name {
@@ -60,20 +300,165 @@
       }
     }
 
-    .companion-card__level-bar {
-      grid-area: level;
-      position: static;
-    }
+    .companion-card__followers {
+      position: relative;
 
-    .companion-card__intro--transport {
+      margin-left: 16px;
+
       @media (min-width: @tablet-width) {
-        display: none;
+        margin-top: 27px;
+        margin-left: 57px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-top: 13px;
       }
     }
 
-    .companion-card__intro--destinations {
+    .companion-card__hashtags {
+      margin: 0;
+      margin-top: 11px;
+      margin-bottom: 15px;
+      margin-left: 7px;
+
+      text-align: left;
+      letter-spacing: -0.03em;
+
       @media (min-width: @tablet-width) {
-        display: none;
+        width: 65%;
+        margin-top: 0;
+        margin-left: 37px;
+        padding-bottom: 5px;
+
+        letter-spacing: normal;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: 62px;
+      }
+    }
+
+    .companion-card__intro {
+      margin-left: 8px;
+
+      @media (min-width: @tablet-width) {
+        margin-left: 49px;
+      }
+
+      &--level {
+        margin-left: 20px;
+
+        @media (min-width: @tablet-width) {
+          display: none;
+        }
+      }
+
+      &--transport {
+        @media (min-width: @tablet-width) {
+          display: none;
+        }
+      }
+
+      &--destinations {
+        @media (min-width: @desktop-width) {
+          display: none;
+        }
+      }
+    }
+
+    .companion-card__destinations {
+      margin-top: 18px;
+      margin-bottom: 10px;
+      margin-left: 7px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 19px;
+        margin-bottom: 0;
+        margin-left: 2px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-top: 47px;
+      }
+    }
+
+    .destinations-list__icon {
+      margin-right: 14px;
+
+      @media (min-width: @tablet-width) {
+        width: 35px;
+        height: 24px;
+      }
+    }
+
+    .companion-card__transport {
+      margin-top: 17px;
+      margin-left: 4px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 5px;
+        margin-right: 10px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: -5px;
+      }
+    }
+
+    .transport-list__button {
+      background-color: @basic-lighter-gray;
+
+      @media (min-width: @tablet-width) {
+        background-color: @basic-white;
+      }
+    }
+
+    .companion-card__level-wrapper {
+      grid-area: level;
+    }
+
+    .companion-card__level-bar {
+      position: static;
+
+      margin-top: 11px;
+      margin-left: 13px;
+      padding-top: 13px;
+      padding-right: 10px;
+      padding-bottom: 14px;
+      padding-left: 9px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 5px;
+        margin-right: 4px;
+        margin-left: 0;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: 50px;
+        margin-top: 0;
+        padding-top: 3px;
+      }
+    }
+
+    .level-bar__level {
+      margin-bottom: -2px;
+    }
+
+    .companion-card__button {
+      @media (min-width: @tablet-width) {
+        width: 150px;
+        margin-left: 29px;
+        margin-top: 11px;
+        margin-bottom: 21px;
+        padding-top: 16px;
+        padding-bottom: 14px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: 54px;
+        margin-top: -1px;
       }
     }
   }
@@ -173,6 +558,7 @@
 .companion-card__hashtags {
   grid-area: hashtags;
 
+  width: 80%;
   margin: 0;
   margin-left: 46px;
   margin-right: 36px;
@@ -229,8 +615,14 @@
 .companion-card__button {
   grid-area: button;
 
+  margin-top: 11px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
   font-size: @form-button-font-size;
   line-height: @form-button-line-height;
+  text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: @text-alt-tablet-font-size;

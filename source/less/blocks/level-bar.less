@@ -17,22 +17,40 @@
     background-color: inherit;
 
     .level-bar__text {
-      color: @special-level-black;
+      font-size: @additional-text-font-size;
+      line-height: @additional-text-line-height;
+      color: @alt-text-color;
 
-      @media (max-width: @mobile-width-only) {
-        font-size: @additional-text-font-size;
-        line-height: @additional-text-line-height;
-        color: @alt-text-color;
+      @media (min-width: @tablet-width) {
+        display: none;
       }
     }
 
     .level-bar__level {
       color: @special-blue;
     }
+
+    .level-bar__text-eng {
+      display: none;
+
+      @media (min-width: @tablet-width) {
+        display: block;
+
+        color: @special-level-black;
+      }
+    }
   }
 
   &--form {
     background-color: inherit;
+
+    @media (min-width: @desktop-width) {
+      margin-right: 44px;
+      margin-bottom: 14px;
+      padding-top: 23px;
+      padding-right: 28px;
+      padding-bottom: 15px;
+    }
 
     .level-bar__level {
       font-size: @level-form-font-size;
@@ -40,6 +58,7 @@
       color: @basic-dark-blue;
 
       @media (min-width: @desktop-width) {
+
         color: @basic-white;
       }
     }
@@ -50,6 +69,8 @@
       color: @alt-text-color;
 
       @media (min-width: @desktop-width) {
+        margin-left: 5px;
+
         color: @basic-white;
       }
     }

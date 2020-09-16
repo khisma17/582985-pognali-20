@@ -29,6 +29,8 @@ svg {
   font-size: @text-font-size;
   line-height: @text-line-height;
   color: @text-color;
+
+  background-color: @basic-lighter-gray;
 }
 
 .visually-hidden {
@@ -80,5 +82,13 @@ svg {
 
   @media (min-width: @desktop-width) {
     display: block;
+  }
+}
+
+.only-desktop-inline {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }

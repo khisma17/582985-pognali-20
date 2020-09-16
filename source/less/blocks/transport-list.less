@@ -17,6 +17,13 @@
     @media (min-width: @desktop-width) {
       flex-direction: row;
     }
+
+    .transport-list__button {
+      @media (min-width: @tablet-width) {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
 }
 
@@ -27,6 +34,8 @@
 }
 
 .transport-list__button {
+  display: block;
+
   width: 32px;
   height: 32px;
   padding: 0;
@@ -37,7 +46,71 @@
   border: none;
   border-radius: 50%;
 
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+
   &--active {
     color: @button-color;
+  }
+}
+
+.transport-list__icon {
+  width: 16px;
+  height: 16px;
+
+  &--bus {
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 23px;
+    }
+  }
+
+  &--plane {
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.transport-list__checkbox {
+  & + .transport-list__button {
+    color: @special-very-light-gray;
+  }
+
+  &:hover {
+    & + .transport-list__button {
+      color: @special-off-transport-hover-gray;
+    }
+  }
+
+  &:disabled {
+    & + .transport-list__button {
+      color: @special-transport-active-gray;
+      background-color: @special-lighter-blue;
+    }
+  }
+
+  &:checked {
+    & + .transport-list__button {
+      color: @button-color;
+    }
+
+    &:hover {
+      & + .transport-list__button {
+        color: @special-transport-hover-gray;
+      }
+    }
+
+    &:disabled {
+      color: @special-gray-blue;
+      background-color: @special-lighter-blue;
+    }
   }
 }
