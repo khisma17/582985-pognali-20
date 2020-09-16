@@ -105,7 +105,7 @@
         }
       }
 
-      .destinations-list__item {
+      .companion-card__destination-item {
         @media (min-width: @tablet-width) {
           margin-right: 19px;
         }
@@ -115,11 +115,29 @@
         margin-top: 9px;
 
         @media (min-width: @tablet-width) {
-          margin-top: 11px;
+          margin-top: 19px;
         }
 
         @media (min-width: @desktop-width) {
           margin-top: 0;
+        }
+      }
+
+      .companion-card__hashtags {
+        @media (min-width: @tablet-width) {
+          padding-bottom: 0;
+        }
+      }
+
+      .companion-card__followers {
+        @media (min-width: @tablet-width) {
+          margin-top: 34px;
+        }
+      }
+
+      .companion-card__level-bar {
+        @media (min-width: @tablet-width) {
+          margin-top: 12px;
         }
       }
     }
@@ -154,6 +172,10 @@
         @media (min-width: @tablet-width) {
           margin-top: 11px;
         }
+
+        @media (min-width: @desktop-width) {
+          margin-top: 0;
+        }
       }
 
       .companion-card__destinations {
@@ -171,15 +193,23 @@
         @media (min-width: @tablet-width) {
           padding-top: 12px;
         }
+
+        @media (min-width: @desktop-width) {
+          padding-top: 5px;
+        }
       }
 
-      .destinations-list__item {
+      .companion-card__destination-item {
         @media (min-width: @tablet-width) {
           margin-right: 22px;
         }
 
         &:first-child {
           margin-bottom: 0;
+
+          @media (min-width: @desktop-width) {
+            margin-bottom: 9px;
+          }
         }
       }
     }
@@ -382,7 +412,7 @@
       }
     }
 
-    .destinations-list__icon {
+    .companion-card__destination-icon {
       margin-right: 14px;
 
       @media (min-width: @tablet-width) {
@@ -407,7 +437,7 @@
       }
     }
 
-    .transport-list__button {
+    .companion-card__transport-button  {
       background-color: @basic-lighter-gray;
 
       @media (min-width: @tablet-width) {
@@ -442,7 +472,7 @@
       }
     }
 
-    .level-bar__level {
+    .companion-card__level {
       margin-bottom: -2px;
     }
 

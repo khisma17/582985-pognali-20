@@ -49,6 +49,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
@@ -77,7 +78,6 @@ const copy = () => {
     "source/img/**",
     "source/js/**",
     "source/*.ico",
-    "source/*.html"
   ], {
     base: "source"
   })
@@ -85,6 +85,20 @@ const copy = () => {
 };
 
 exports.copy = copy;
+
+// HTML
+
+const html = () => {
+  return gulp.src([
+    "source/*.html"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.html = html;
+
 
 // Clean
 
@@ -96,12 +110,12 @@ exports.clean = clean;
 
 // Build
 
-const build = gulp.series(clean, images, copy, styles);
+const build = gulp.series(clean, images, copy, styles, html);
 
 exports.build = build;
 
 // Start
 
-const start = gulp.series(build, server);
+const start = gulp.series(build, server, watcher);
 
 exports.start = start;

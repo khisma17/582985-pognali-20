@@ -6,9 +6,23 @@
   line-height: @text-alt-line-height;
   color: @alt-text-color;
 
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
     font-size: @text-alt-tablet-font-size;
     line-height: @text-alt-tablet-line-height;
+  }
+
+  &:hover  {
+    color: @special-hover-blue-gray;
+  }
+
+  &:focus  {
+    color: @special-hover-blue-gray;
+  }
+
+  &:active  {
+    color: @special-active-blue-gray;
   }
 }
 
@@ -19,5 +33,17 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 23px;
+  }
+
+  &:hover  {
+    color: @special-hover-blue-gray;
+  }
+
+  &:focus  {
+    color: @special-hover-blue-gray;
+  }
+
+  &:active  {
+    color: @special-active-blue-gray;
   }
 }

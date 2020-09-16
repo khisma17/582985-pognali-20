@@ -10,7 +10,7 @@
       background-color: @basic-dark-blue;
     }
 
-    .nav {
+    .header__nav {
       @media (min-width: @desktop-width) {
         background-color: @basic-dark-blue;
       }
@@ -179,7 +179,7 @@
       background-color: @basic-white;
     }
 
-    .nav__link {
+    .header__nav-link {
       color: @link-color;
     }
 
@@ -312,10 +312,8 @@
 }
 
 .header__social {
-  &.social {
-    @media (min-width: @desktop-width) {
-      display: none;
-    }
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -337,9 +335,7 @@
 }
 
 .header__contacts-list {
-  &.contacts-list {
-    @media (min-width: @desktop-width) {
-      display: none;
-    }
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
