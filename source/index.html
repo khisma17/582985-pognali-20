@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/styles.min.css" rel="stylesheet">
   </head>
   <body class="body">
-    <header class="header header--closed">
+    <header class="header header--index header--nojs"> <!-- --opened - меню открыто; --closed - меню закрыто; --fixed - меню, когда сайт проскролили  -->
       <div class="center header__center">
         <div class="header__wrapper">
           <a href="" class="header__logo header__logo--light">
@@ -66,14 +66,14 @@
           <ul class="promo__actions-list actions-list">
             <li class="actions-list__item actions-list__item--phone"><a class="actions-list__link" href="tel:88005558628" aria-label="Позвонить"></a></li>
             <li class="actions-list__item actions-list__item--email"><a class="actions-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо"></a></li>
-            <li class="actions-list__item actions-list__item--login"><a class="actions-list__link" href="login.html">Авторизация</a></li>
+            <li class="actions-list__item actions-list__item--login"><a class="actions-list__link" href="">Авторизация</a></li>
           </ul>
           <div class="promo__blockquote">
             <blockquote class="promo__quote">«Лучшее&nbsp;приложение, что я видел в жизни!»<br><cite class="promo__cite">Мурат Эльтазин главный&nbsp;редактор газеты «гаджетлайф»</cite></blockquote>
           </div>
         </div>
         <div class="promo__roadmap roadmap">
-          <div class="center">
+          <div class="center roadmap__center">
             <ul class="roadmap__list">
               <li class="roadmap__item"><span class="roadmap__text">Выберите направление</span></li>
               <li class="roadmap__item"><span class="roadmap__text">Изучите идеи путешественников</span></li>
@@ -87,7 +87,7 @@
             <h3 class="about__heading">О сервисе</h3>
             <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий <br class="only-tablet">и черпайте вдохновение в&nbsp;чужих.</p>
             <p class="about__text">А если найдете кого-то близкого по духу &ndash; <br class="only-desktop">скорее зовите в совместный трип!</p>
-            <a class="about__button button" href="about.html">Подробнее
+            <a class="about__button button" href="">Подробнее
               <svg class="about__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14"><path d="M0 14V.1l10 7z"/></svg>
             </a>
           </div>
@@ -159,9 +159,9 @@
                   <span class="level-bar__text">level</span>
                 </div>
                 <ul class="companion-card__destinations destinations-list">
-                  <li class="destinations-list__item"><img src="https://via.placeholder.com/35x25" alt="Шри-Ланка" width="35" height="25"></li>
-                  <li class="destinations-list__item"><img src="https://via.placeholder.com/35x25" alt="Таиланд" width="35" height="25"></li>
-                  <li class="destinations-list__item"><img src="https://via.placeholder.com/35x25" alt="Сейшелы" width="35" height="25"></li>
+                  <li class="destinations-list__item"><img src="./img/flag-sri-lanka.svg" alt="Шри-Ланка" width="35" height="25"></li>
+                  <li class="destinations-list__item"><img src="./img/flag-thailand.svg" alt="Таиланд" width="35" height="25"></li>
+                  <li class="destinations-list__item"><img src="./img/flag-seychelles.svg" alt="Сейшелы" width="35" height="25"></li>
                 </ul>
                 <a class="companion-card__link" href=""><h3 class="companion-card__name">Таня Фирсова</h3></a>
                 <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -190,8 +190,8 @@
                 <a class="companion-card__image-link" href=""><img class="companion-card__image" src="./img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин"></a>
                 <div class="companion-card__level-bar level-bar"><span class="level-bar__level">80</span><span class="level-bar__text">level</span></div>
                 <ul class="companion-card__destinations destinations-list">
-                  <li class="destinations-list__item"><img src="https://via.placeholder.com/35x25" alt="Бельгия" width="35" height="25"></li>
-                  <li class="destinations-list__item"><img src="https://via.placeholder.com/35x25" alt="Чехия" width="35" height="25"></li>
+                  <li class="destinations-list__item"><img src="./img/flag-belgium.svg" alt="Бельгия" width="35" height="25"></li>
+                  <li class="destinations-list__item"><img src="./img/flag-czech.svg" alt="Чехия" width="35" height="25"></li>
                 </ul>
                 <a class="companion-card__link companion-card__link--online" href=""><h3 class="companion-card__name">Петя Демин</h3></a>
                 <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
@@ -238,7 +238,7 @@
               <p class="rates-list__price">59 руб./мес</p>
             </li>
           </ul>
-          <a class="rates__link" href="rates.html">Показать тарифы для бизнеса</a>
+          <a class="rates__link" href="">Показать тарифы для бизнеса</a>
         </div>
       </section>
       <section class="login">
@@ -271,7 +271,7 @@
             <p class="route__address">
               <svg class="route__address-icon" width="15" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 43"><path d="M11.7 13.9c0-1.2 1-2.2 2.3-2.2s2.3 1 2.3 2.2c0 1.2-1 2.2-2.3 2.2-1.2 0-2.3-1-2.3-2.2zM14 8.1c-3.2 0-5.9 2.6-5.9 5.8s2.6 5.8 5.9 5.8c3.2 0 5.9-2.6 5.9-5.8 0-3.2-2.7-5.8-5.9-5.8zM0 13.6c0 9.1 10.9 16.2 11.7 26.7v.4c0 1.2 1 2.2 2.3 2.2s2.3-1 2.3-2.2v-.4C17.2 29.8 28 22.8 28 13.6 28 6.1 21.7 0 14 0S0 6.1 0 13.6zm14-9.1c5.2 0 9.5 4.2 9.5 9.4s-4.2 9.4-9.5 9.4-9.5-4.2-9.5-9.4S8.8 4.5 14 4.5z"/></svg>ул. Большая Конюшенная, 19/8
             </p>
-            <a href="" class="route__button button">Проложить маршрут
+            <a href="https://yandex.ru/maps/-/CCQxfIv4lC" class="route__button button">Проложить маршрут
               <svg class="route__button-icon" width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14"><path d="M0 14V.1l10 7z"/></svg>
             </a>
           </div>
@@ -307,7 +307,7 @@
         </div>
       </div>
     </footer>
-    <div class="visually-hidden modal">
+    <div class="modal modal--nojs">
       <h2 class="modal__heading">Бизнес-тарифы</h2>
       <div class="modal__item">
         <p class="modal__service">Реклама у блоггера</p>

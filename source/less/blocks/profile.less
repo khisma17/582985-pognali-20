@@ -6,7 +6,6 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    z-index: -1;
     top: -60px;
 
     margin-bottom: -60px;
@@ -37,6 +36,8 @@
 }
 
 .profile__title {
+  z-index: 1;
+
   margin: 0;
 
   font-weight: @font-bold;
@@ -68,10 +69,10 @@
   padding-bottom: 27px;
   padding-left: 25px;
 
+  font-family: @basic-font-family;
   font-size: @text-special-font-size;
   line-height: @text-special-line-height;
   color: @special-hover-gray;
-  letter-spacing: -0.15em;
 
   background-color: @basic-lighter-gray;
   border: 1px solid @special-outline-gray;
@@ -92,6 +93,20 @@
     top: 0;
 
     margin-bottom: 0;
+  }
+
+  &:hover {
+    border-color: @special-hover-light-gray;
+  }
+
+  &:active {
+    border-color: @basic-dark-blue;
+    color: @basic-gray;
+  }
+
+  &:focus {
+    border-color: @basic-dark-blue;
+    color: @basic-gray;
   }
 }
 
@@ -244,9 +259,17 @@
   }
 
   .transport-list__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
     @media (min-width: @tablet-width) {
       width: 43px;
       height: 43px;
+    }
+
+    .transport-list__icon {
+      margin: auto;
     }
   }
 }

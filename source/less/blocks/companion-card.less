@@ -11,14 +11,14 @@
   grid-template-rows: repeat(5, auto);
 
   margin-bottom: 10px;
-  padding-bottom: 18px;
+  padding-bottom: 17px;
 
   background-color: @basic-white;
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
 
     border-radius: 20px;
   }
@@ -81,7 +81,15 @@
     }
 
     &:nth-of-type(3) {
-      margin-bottom: 30px;
+      margin-bottom: 11px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 42px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 30px;
+      }
 
       .companion-card__destinations {
         margin-bottom: 14px;
@@ -104,7 +112,7 @@
       }
 
       .companion-card__button {
-        margin-top: 3px;
+        margin-top: 9px;
 
         @media (min-width: @tablet-width) {
           margin-top: 11px;
@@ -117,8 +125,36 @@
     }
 
     &:last-of-type {
-      margin-bottom: 65px;
-      padding-bottom: 0;
+      margin-bottom: 16px;
+      padding-bottom: 26px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 49px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 64px;
+        padding-bottom: 1px;
+      }
+
+      .companion-card__link {
+        &::before {
+          @media (min-width: @tablet-width) {
+            top: 11px;
+            right: 11px;
+
+            background-color: @special-bright-green;
+          }
+        }
+      }
+
+      .companion-card__button {
+        margin-top: 17px;
+
+        @media (min-width: @tablet-width) {
+          margin-top: 11px;
+        }
+      }
 
       .companion-card__destinations {
         margin-bottom: 16px;
@@ -131,11 +167,19 @@
       .companion-card__level-bar {
         padding-top: 5px;
         padding-left: 21px;
+
+        @media (min-width: @tablet-width) {
+          padding-top: 12px;
+        }
       }
 
       .destinations-list__item {
         @media (min-width: @tablet-width) {
           margin-right: 22px;
+        }
+
+        &:first-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -229,9 +273,14 @@
       }
 
       &::before {
-        top: 14px;
+        top: 23px;
         left: auto;
-        right: 31px;
+        right: 22px;
+
+        @media (min-width: @tablet-width) {
+          top: 14px;
+          right: 53px;
+        }
 
         @media (min-width: @desktop-width) {
           top: 13px;
@@ -373,8 +422,8 @@
     .companion-card__level-bar {
       position: static;
 
-      margin-top: 9px;
-      margin-left: 3px;
+      margin-top: 11px;
+      margin-left: 13px;
       padding-top: 13px;
       padding-right: 10px;
       padding-bottom: 14px;
@@ -566,7 +615,7 @@
 .companion-card__button {
   grid-area: button;
 
-  margin-top: 5px;
+  margin-top: 11px;
   padding-top: 11px;
   padding-bottom: 11px;
 

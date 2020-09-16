@@ -80,8 +80,11 @@
 
   .pagination__button {
     width: 50%;
-    margin-right: 27px;
     padding: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 28px;
+    }
 
     @media (min-width: @desktop-width) {
       margin-right: 32px;

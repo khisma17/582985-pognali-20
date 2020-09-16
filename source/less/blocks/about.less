@@ -1,17 +1,66 @@
 .about {
+  position: relative;
+
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-size: 292px 353px;
-  background-position: center right;
+  background-position: 18px center;
 
   padding-top: 33px;
+  padding-bottom: 82px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+    background-size: 292px auto;
+  }
 
   @media (min-width: @tablet-width) {
-    padding-top: 41px;
+    padding-top: 37px;
+    padding-bottom: 89px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: 98% 36.4%;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+      background-size: 376px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 132px;
+    padding-bottom: 165px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: 92.6% 99.5%;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+      background-size: 630px auto;
+    }
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 40px;
+
+      width: 89.6%;
+      height: 212px;
+
+      background-color: @special-background-blue;
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 72px;
+      left: 60px;
+
+      width: 212px;
+    }
   }
 }
 
@@ -74,8 +123,8 @@
     font-weight: @font-bold;
 
     @media (min-width: @tablet-width) {
-      margin-top: 31px;
-      margin-bottom: 52px;
+      margin-top: 34px;
+      margin-bottom: 56px;
 
       font-size: @cite-tablet-font-size;
       line-height: @cite-tablet-line-height;

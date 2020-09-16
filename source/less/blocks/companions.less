@@ -7,9 +7,19 @@
   padding-top: 102px;
 
   background-color: @basic-blue;
+
+  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 86% 5.7%, -3.8% 26.7%;
+
   border-radius: 30px;
 
   padding-bottom: 31px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
+    background-size: 143px auto, 71px auto;
+  }
 
   @media (min-width: @tablet-width) {
     top: -67px;
@@ -18,7 +28,17 @@
     padding-bottom: 87px;
     margin-bottom: -67px;
 
-    border-radius: 60px;
+    border-radius: 0;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
+    background-position: 6.4% 41.4%, 84.6% 14%;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
+      background-size: 143px auto, 285px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -28,6 +48,36 @@
     padding-top: 227px;
     padding-bottom: 134px;
     border-radius: 56px;
+
+    background-position: 42.2% 32.5%, 16.5% 84.1%;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 68px;
+    left: -19px;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: @special-background-blue;
+    border-radius: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 138px;
+      left: 40px;
+
+      width: 212px;
+      height: 212px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 171px;
+      left: 60px;
+    }
   }
 
   &--catalog {
@@ -38,6 +88,7 @@
     padding-bottom: 46px;
 
     background-color: @basic-lighter-gray;
+    background-size: 0;
     border-radius: 0;
 
     @media (min-width: @tablet-width) {
@@ -47,6 +98,10 @@
 
     @media (min-width: @desktop-width) {
       padding-bottom: 79px;
+    }
+
+    &::before {
+      width: 0;
     }
 
     .companions__button {
@@ -59,11 +114,6 @@
 }
 
 .companions__center {
-  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-size: 143px 143px, 71px 71px;
-  background-position: top right, center left;
-
   @media (min-width: @tablet-width) {
     padding-left: 75px;
     padding-right: 75px;
