@@ -485,14 +485,33 @@
 
   &--dropdown {
     margin-bottom: 0;
+    margin-right: 22px;
 
     letter-spacing: 0.1em;
+
+    @media (min-width: @tablet-width) {
+      margin-right: -52px;
+    }
   }
 }
 
 .step__toggle {
   border: none;
+  margin-top: 1px;
+  margin-bottom: 1px;
   background-color: @basic-white;
+}
+
+.step__toggle-icon {
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 21px;
+    height: 11px;
+  }
 }
 
 .step__back {

@@ -137,10 +137,10 @@
             <li class="plan-pagination__item"><button class="plan-pagination__button" type="button"></button></li>
           </ul>
           <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
-            <section class="add-plan__step step">
+            <section class="add-plan__step step" id="step-1">
               <div class="step__header">
                 <div class="step__wrapper">
-                  <h3 class="step__heading" id="step-1">Шаг 1. Даты&nbsp;пребывания</h3>
+                  <h3 class="step__heading">Шаг 1. Даты&nbsp;пребывания</h3>
                   <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                 </div>
                 <ul class="step__navigation">
@@ -155,9 +155,9 @@
                     <span class="step__label-main">Ищу попутчиков:</span>
                     <span class="step__unit">Чел.</span>
                     <p class="step__number-field">
-                      <button class="step__number-controls step__number-controls--down"></button>
+                      <button class="step__number-controls step__number-controls--down" type="button"></button>
                       <input class="step__number" type="number" name="companions" id="companions" value="2">
-                      <button class="step__number-controls step__number-controls--up"></button>
+                      <button class="step__number-controls step__number-controls--up" type="button"></button>
                     </p>
                   </div>
                 </li>
@@ -166,9 +166,9 @@
                     <span class="step__label-main">Длительность:</span>
                     <span class="step__unit">Дн.</span>
                     <p class="step__number-field">
-                      <button class="step__number-controls step__number-controls--down"></button>
+                      <button class="step__number-controls step__number-controls--down" type="button"></button>
                       <input class="step__number" type="number" name="duration" id="duration" value="2">
-                      <button class="step__number-controls step__number-controls--up"></button>
+                      <button class="step__number-controls step__number-controls--up" type="button"></button>
                     </p>
                   </div>
                 </li>
@@ -178,11 +178,11 @@
                 </li>
                 <li class="step__dates">
                   <div class="step__calendar-wrapper">
-                    <button class="step__controls step__controls--left">
+                    <button class="step__controls step__controls--left" type="button">
                       <svg class="step__icon" width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/></svg>
                     </button>
                     <h4 class="step__month">Март 2019</h4>
-                    <button class="step__controls step__controls--right">
+                    <button class="step__controls step__controls--right" type="button">
                       <svg class="step__icon" width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/></svg>
                     </button>
                   </div>
@@ -255,10 +255,10 @@
               </ul>
               <a class="step__button button button--oval" href="#step-2">Следующий шаг</a>
             </section>
-            <section class="add-plan__step step">
+            <section class="add-plan__step step" id="step-2">
               <div class="step__header">
                 <div class="step__wrapper">
-                  <h3 class="step__heading" id="step-2">Шаг 2. Маршрут</h3>
+                  <h3 class="step__heading">Шаг 2. Маршрут</h3>
                   <p class="step__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
                 </div>
                 <ul class="step__navigation">
@@ -277,7 +277,9 @@
               </div>
               <div class="step__dropdown-wrapper">
                 <h4 class="step__input step__input--dropdown">Выберите страну</h4>
-                <button class="step__toggle" type="button"></button>
+                <button class="step__toggle" type="button">
+                  <svg class="step__toggle-icon" width="11" height="7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9"><path d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z"/></svg>
+                </button>
               </div>
               <ul class="step__dropdown step__dropdown--opened letterfield">
                 <li class="letterfield__item">
@@ -575,10 +577,10 @@
                 <a class="step__back button" href="#step-1">На шаг назад</a>
               </div>
             </section>
-            <section class="add-plan__step step">
+            <section class="add-plan__step step" id="step-3">
               <div class="step__header">
                 <div class="step__wrapper">
-                  <h3 class="step__heading" id="step-3">Шаг 3. Развлечения</h3>
+                  <h3 class="step__heading">Шаг 3. Развлечения</h3>
                   <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
                 </div>
                 <ul class="step__navigation">

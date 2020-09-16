@@ -40,69 +40,71 @@
   }
 
   &--opened {
-    background-color: @basic-white;
-
-    .header__nav {
-      display: block;
-    }
-
-    .header__center {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 7;
-
-      width: 100%;
-
+    @media (max-width: @tablet-width-only) {
       background-color: @basic-white;
-    }
 
-    .header__nav-toggle {
-      width: 18px;
-      height: 19px;
-    }
+      .header__nav {
+        display: block;
+      }
 
-    .header__nav-toggle::before,
-    .header__nav-toggle::after {
-      content: "";
-      position: absolute;
-      top: 8px;
-      right: -2px;
+      .header__center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 7;
 
-      width: 24px;
-      height: 2px;
-      background-color: @special-gray;
-    }
+        width: 100%;
 
-    .header__nav-toggle::before {
-      transform: rotate(45deg);
-    }
+        background-color: @basic-white;
+      }
 
-    .header__nav-toggle::after {
-      transform: rotate(-45deg);
-    }
+      .header__nav-toggle {
+        width: 18px;
+        height: 19px;
+      }
 
-    .header__nav-toggle:hover::before,
-    .header__nav-toggle:hover::after {
-      background-color: @special-button-hover-gray;
-    }
+      .header__nav-toggle::before,
+      .header__nav-toggle::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: -2px;
 
-    .header__nav-toggle:focus::before,
-    .header__nav-toggle:focus::after {
-      background-color: @special-button-hover-gray;
-    }
+        width: 24px;
+        height: 2px;
+        background-color: @special-gray;
+      }
 
-    .header__nav-toggle:active::before,
-    .header__nav-toggle:active::after {
-      background-color: @special-button-active-gray;
-    }
+      .header__nav-toggle::before {
+        transform: rotate(45deg);
+      }
 
-    .header__logo--light {
-      display: none;
-    }
+      .header__nav-toggle::after {
+        transform: rotate(-45deg);
+      }
 
-    .header__logo--dark {
-      display: block;
+      .header__nav-toggle:hover::before,
+      .header__nav-toggle:hover::after {
+        background-color: @special-button-hover-gray;
+      }
+
+      .header__nav-toggle:focus::before,
+      .header__nav-toggle:focus::after {
+        background-color: @special-button-hover-gray;
+      }
+
+      .header__nav-toggle:active::before,
+      .header__nav-toggle:active::after {
+        background-color: @special-button-active-gray;
+      }
+
+      .header__logo--light {
+        display: none;
+      }
+
+      .header__logo--dark {
+        display: block;
+      }
     }
   }
 
